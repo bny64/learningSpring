@@ -10,11 +10,25 @@ import com.jcraft.jsch.SftpException;
 
 public class SftpController {
 
-	private Session session = null;
-	private Channel channel = null;
-	private ChannelSftp channelSftp = null;
+	private static Session session = null;
+	private static Channel channel = null;
+	private static ChannelSftp channelSftp = null;
 	
-	public void ttsInit(String host, String userName, String password, int port) {
+	public static void main(String[] arg) {
+		
+		String host = "adress";
+		String password = "pass";
+		String userName = "name";
+		String fileDir1 = "path1";
+		String fileDir2 = "path2";
+		int port = 22;
+		
+		ttsInit(host, userName, password, port);
+		deleteFile(fileDir1);
+		disconnection();
+	}
+	
+	public static void ttsInit(String host, String userName, String password, int port) {
 		JSch jsch = new JSch();
 		
 		try {
@@ -31,21 +45,27 @@ public class SftpController {
 			channel = session.openChannel("sftp");
 			channel.connect();
 			
+			
 		} catch (JSchException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		channelSftp = (ChannelSftp) channel;
 	}
 	
-	public void deleteFile(String fileDir) {
+	public static void deleteFile(String fileDir) {
 		SftpATTRS attrs = null;
 		
 		try {
-			attrs = channelSftp.stat(fileDir);
 			
-			if(attrs!=null) {
+			attrs = channelSftp.stat(fileDir);
+			System.out.println(attrs);
+			
+			if(attrs!=null) { 
 				channelSftp.rm(fileDir);
 			}
+			 
 			
 		} catch (SftpException e) {
 			// TODO Auto-generated catch block
@@ -53,7 +73,7 @@ public class SftpController {
 		}
 	}
 	
-	public void disconnection() {
+	public static void disconnection() {
 		channelSftp.quit();
 	}
 	
