@@ -1,5 +1,7 @@
 package com.tutorialspoint;
 
+import java.io.File;
+
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
@@ -16,15 +18,20 @@ public class SftpController {
 	
 	public static void main(String[] arg) {
 		
-		String host = "adress";
+		String host = "port";
 		String password = "pass";
 		String userName = "name";
 		String fileDir1 = "path1";
 		String fileDir2 = "path2";
+		String[] fileList = {"hello1.txt", "hello2.txt", "hello3.txt"};
 		int port = 22;
 		
 		ttsInit(host, userName, password, port);
-		deleteFile(fileDir1);
+		
+		for(int i=0; i<fileList.length; i++) {
+			deleteFile2(fileDir2 + "/" + fileList[i]);
+			deleteFile(fileDir1 + "/" + fileList[i]);
+		}
 		disconnection();
 	}
 	
@@ -58,9 +65,8 @@ public class SftpController {
 		SftpATTRS attrs = null;
 		
 		try {
-			
+			System.out.println(fileDir);
 			attrs = channelSftp.stat(fileDir);
-			System.out.println(attrs);
 			
 			if(attrs!=null) { 
 				channelSftp.rm(fileDir);
@@ -71,6 +77,18 @@ public class SftpController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public static void deleteFile2(String fileDir) {
+		
+		File file = new File(fileDir);
+		
+		if(file.isFile()) {
+			file.delete();
+		}else {
+			System.out.println("no such file");
+		}
+		
 	}
 	
 	public static void disconnection() {
