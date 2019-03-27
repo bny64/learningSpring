@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xmlns="http://java.sun.com/xml/ns/javaee" 
-xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
-id="your_id" version="3.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="your_id" version="3.0">
+	<!-- DD파일의 title 정도-->
+	<display-name>your_display_name</display-name>
 
-  <display-name>your_display_name</display-name>
-
-
+	<!-- application context의 설정파일의 경로를 입력 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/root-context.xml</param-value>
 	</context-param>
-	
+
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-
+	
+	<!-- context -> 전체 설정 -->
+	<!-- servlet -> 해당 서블릿 하나에 대한 설정 -->
 	<servlet>
+		<!-- servlet-name 아무거나 -->
 		<servlet-name>pji</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- init param을 이용해 servlet context의 설정파일의 경로 입력 -->
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/pji-servlet.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-		
 
 
-<servlet-mapping>
 
-    <servlet-name>pji</servlet-name>
+	<servlet-mapping>
+		<!-- servlet-name과 일치 시킴 ▽ -->
+		<servlet-name>pji</servlet-name>
 
-    <url-pattern>/</url-pattern>
+		<url-pattern>/</url-pattern>
 
-</servlet-mapping>
+	</servlet-mapping>
 
-  
-    <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-  	</welcome-file-list>
-  
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
 </web-app>
