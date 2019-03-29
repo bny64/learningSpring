@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>TestProject - Hello Spring World</title>
+<link rel="stylesheet" type="text/css" href="/css/animate.css">
 </head>
 <body>
 <a href="index">Enter Spring World</a>
