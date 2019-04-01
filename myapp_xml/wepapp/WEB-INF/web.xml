@@ -61,8 +61,7 @@
 		<servlet-name>dispatcherServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 
-	</servlet-mapping>
-
+	</servlet-mapping>	
 	<!-- webapp 하위 경로 -->
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>

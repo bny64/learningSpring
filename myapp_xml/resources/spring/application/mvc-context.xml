@@ -12,5 +12,12 @@
 
 	<context:component-scan base-package = "com.test.controller" />	
 	<mvc:annotation-driven/>
-		
+	
+	<mvc:resources location="/static/css/**" mapping="/css/**"/>
+	<mvc:resources location="/static/fonts/**" mapping="/fonts/**"/>
+	<mvc:resources location="/static/images/**" mapping="/images/**"/>
+	<mvc:resources location="/static/js/**" mapping="/js/**"/>
+	<mvc:resources location="/static/sass/**" mapping="/sass/**"/>
+	<mvc:resources location="/static/publishing/**" mapping="/publishing/**"/>
+	
 </beans>

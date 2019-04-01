@@ -9,11 +9,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class SpringTestController {
 	
 	@RequestMapping(value="/index", method=RequestMethod.GET)
-	public ModelAndView TestController(){
-		System.out.println("index");
-		ModelAndView mv = new ModelAndView();		
-		mv.addObject("message", "hello~ Spring World");
-		mv.setViewName("/index");
-		return mv;
+	public ModelAndView TestController(ModelAndView mnv){
+		System.out.println("index");				
+		mnv.addObject("message", "hello~ Spring World");
+		mnv.setViewName("index");
+		return mnv;
 	}
 }
