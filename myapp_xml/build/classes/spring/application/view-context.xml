@@ -9,10 +9,21 @@
    http://www.springframework.org/schema/context/spring-context-3.0.xsd
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
    
-   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-      <property name="prefix" value="/WEB-INF/views/" />
-      <property name="suffix" value=".jsp" />
-      <property name="contentType" value="test/html; charset=UTF-8"/>
-      <property name="order" value="0"></property>
-   </bean> 
+   <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+   	<property name="viewResolvers">
+   		<list>
+   			<bean class="org.springframework.web.servlet.view.tiles3.TilesViewResolver">
+   				<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
+   				<property name="order" value="0"/>
+   			</bean>
+   			<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		     	<property name="prefix" value="/WEB-INF/views/" />
+		      	<property name="suffix" value=".jsp" />
+		      	<property name="contentType" value="test/html; charset=UTF-8"/>
+		      	<property name="order" value="0"></property>
+		   </bean> 
+   		</list>
+   	</property>
+   </bean>
+   
 </beans>
