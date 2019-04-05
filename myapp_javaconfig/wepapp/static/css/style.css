@@ -380,17 +380,31 @@ figure {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 16px;
-  color: #F78536;
+  font-size: 16px;  
   background: rgba(0, 0, 0, 0.06);
   padding: 10px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  background: #1e9600; /* Old browsers */
+  background: -moz-linear-gradient(left, #40e0d0, #ff8c00, #ff0080); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,#40e0d0, #ff8c00, #ff0080); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efc5ca', endColorstr='#d24b5a',GradientType=1 ); /* IE6-9 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #fh5co-logo a {
-  color: #F78536;
+  background: #1e9600; /* Old browsers */
+  background: -moz-linear-gradient(left, #40e0d0, #ff8c00, #ff0080); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,#40e0d0, #ff8c00, #ff0080); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efc5ca', endColorstr='#d24b5a',GradientType=1 ); /* IE6-9 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #fh5co-logo a:hover, #fh5co-logo a:focus {
   color: #F78536 !important;

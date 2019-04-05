@@ -2,7 +2,7 @@
 <div class="fh5co-hero">
 	<div class="fh5co-overlay"></div>
 	<div class="fh5co-cover" data-stellar-background-ratio="0.5"
-		style="background-image: url(/myapp_xml/images/cover_bg_1.jpg);">
+		style="background-image: url(/myapp_javaconfig/images/cover_bg_1.jpg);">
 		<div class="desc">
 			<div class="container">
 				<div class="row">
@@ -274,7 +274,7 @@
 			<div class="col-lg-4 col-md-4 col-sm-6">
 				<div class="fh5co-blog animate-box">
 					<a href="#"><img class="img-responsive"
-						src="/myapp_xml/images/place-1.jpg" alt=""></a>
+						src="/myapp_javaconfig/images/place-1.jpg" alt=""></a>
 					<div class="blog-text">
 						<div class="prod-title">
 							<h3>
@@ -295,7 +295,7 @@
 			<div class="col-lg-4 col-md-4 col-sm-6">
 				<div class="fh5co-blog animate-box">
 					<a href="#"><img class="img-responsive"
-						src="/myapp_xml/images/place-2.jpg" alt=""></a>
+						src="/myapp_javaconfig/images/place-2.jpg" alt=""></a>
 					<div class="blog-text">
 						<div class="prod-title">
 							<h3>
@@ -317,7 +317,7 @@
 			<div class="col-lg-4 col-md-4 col-sm-6">
 				<div class="fh5co-blog animate-box">
 					<a href="#"><img class="img-responsive"
-						src="/myapp_xml/images/place-3.jpg" alt=""></a>
+						src="/myapp_javaconfig/images/place-3.jpg" alt=""></a>
 					<div class="blog-text">
 						<div class="prod-title">
 							<h3>
@@ -338,7 +338,7 @@
 			<div class="col-lg-4 col-md-4 col-sm-6">
 				<div class="fh5co-blog animate-box">
 					<a href="#"><img class="img-responsive"
-						src="/myapp_xml/images/place-4.jpg" alt=""></a>
+						src="/myapp_javaconfig/images/place-4.jpg" alt=""></a>
 					<div class="blog-text">
 						<div class="prod-title">
 							<h3>
@@ -359,7 +359,7 @@
 			<div class="col-lg-4 col-md-4 col-sm-6">
 				<div class="fh5co-blog animate-box">
 					<a href="#"><img class="img-responsive"
-						src="/myapp_xml/images/place-5.jpg" alt=""></a>
+						src="/myapp_javaconfig/images/place-5.jpg" alt=""></a>
 					<div class="blog-text">
 						<div class="prod-title">
 							<h3>
@@ -381,7 +381,7 @@
 			<div class="col-lg-4 col-md-4 col-sm-6">
 				<div class="fh5co-blog animate-box">
 					<a href="#"><img class="img-responsive"
-						src="/myapp_xml/images/place-6.jpg" alt=""></a>
+						src="/myapp_javaconfig/images/place-6.jpg" alt=""></a>
 					<div class="blog-text">
 						<div class="prod-title">
 							<h3>
@@ -406,7 +406,7 @@
 </div>
 <!-- fh5co-blog-section -->
 <div id="fh5co-testimonial"
-	style="background-image: url(/myapp_xml/images/img_bg_1.jpg);">
+	style="background-image: url(/myapp_javaconfig/images/img_bg_1.jpg);">
 	<div class="container">
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">

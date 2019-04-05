@@ -4,7 +4,7 @@
 		<div class="nav-header">
 			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
 			<h1 id="fh5co-logo">
-				<a href="index.html"><i class="fas fa-leaf fa-lg fa-spin" style="height:48px !important;width:48px !important;top:-5px;left:-15px;color:#79B361;font-size: 27px;padding-top: 12px !important;padding-left: 8px;"></i>jAVA_CONFIG</a>
+				<a href="index.html"><i class="fas fa-leaf fa-lg fa-spin" style="height:48px !important;width:48px !important;top:-5px;left:-15px;color:#79B361;font-size: 27px;padding-top: 12px !important;padding-left: 8px;"></i>jAVA_XML</a>
 			</h1>
 			<!-- START #fh5co-menu-wrap -->
 			<nav id="fh5co-menu-wrap" role="navigation">
