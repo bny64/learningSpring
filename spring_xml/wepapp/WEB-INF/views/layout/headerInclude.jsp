@@ -38,28 +38,28 @@ Facebook: 		https://www.facebook.com/fh5co
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 
 <!-- Animate.css -->
-<link rel="stylesheet" href="/myapp_xml/css/animate.css">
+<link rel="stylesheet" href="/spring_xml/css/animate.css">
 <!-- Icomoon Icon Fonts-->
-<link rel="stylesheet" href="/myapp_xml/css/icomoon.css">
+<link rel="stylesheet" href="/spring_xml/css/icomoon.css">
 <!-- Bootstrap  -->
-<link rel="stylesheet" href="/myapp_xml/css/bootstrap.css">
+<link rel="stylesheet" href="/spring_xml/css/bootstrap.css">
 <!-- Superfish -->
-<link rel="stylesheet" href="/myapp_xml/css/superfish.css">
+<link rel="stylesheet" href="/spring_xml/css/superfish.css">
 <!-- Magnific Popup -->
-<link rel="stylesheet" href="/myapp_xml/css/magnific-popup.css">
+<link rel="stylesheet" href="/spring_xml/css/magnific-popup.css">
 <!-- Date Picker -->
-<link rel="stylesheet" href="/myapp_xml/css/bootstrap-datepicker.min.css">
+<link rel="stylesheet" href="/spring_xml/css/bootstrap-datepicker.min.css">
 <!-- CS Select -->
-<link rel="stylesheet" href="/myapp_xml/css/cs-select.css">
-<link rel="stylesheet" href="/myapp_xml/css/cs-skin-border.css">
+<link rel="stylesheet" href="/spring_xml/css/cs-select.css">
+<link rel="stylesheet" href="/spring_xml/css/cs-skin-border.css">
 
-<link rel="stylesheet" href="/myapp_xml/css/style.css">
-<link rel="stylesheet" href="/myapp_xml/css/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/spring_xml/css/style.css">
+<link rel="stylesheet" href="/spring_xml/css/font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel='stylesheet' type='text/css' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 <!-- Modernizr JS -->
-<script src="/myapp_xml/js/modernizr-2.6.2.min.js"></script>
+<script src="/spring_xml/js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
-<script src="/myapp_xml/js/respond.min.js"></script>
+<script src="/spring_xml/js/respond.min.js"></script>
 <![endif]-->
