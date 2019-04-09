@@ -10,9 +10,11 @@
    http://www.springframework.org/schema/mvc
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<context:component-scan base-package = "com.test.controller" />	
+	<!-- mvc controller를 스캔함. -->
+	<context:component-scan base-package = "com.bny.controller" />	
 	<mvc:annotation-driven/>
 	
+	<!-- mapping에 해당하는 url들을 location에 정의된 경로로 받아들임. -->
 	<mvc:resources location="/static/css/**" mapping="/css/**"/>
 	<mvc:resources location="/static/fonts/**" mapping="/fonts/**"/>
 	<mvc:resources location="/static/images/**" mapping="/images/**"/>

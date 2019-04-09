@@ -9,14 +9,18 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.bny.dao.UserDao;
+
 public class MySQLTest extends CommonTest{
 	
 	@Autowired
 	private DataSource ds;
 	@Autowired
 	private SqlSessionFactory sqlFactory;
+	@Autowired
+	UserDao userDao;	
 	
-	@Test
+	//@Test
 	public void testConnection(){
 		System.out.println("hello");
 		try(Connection con = ds.getConnection()){
@@ -26,7 +30,7 @@ public class MySQLTest extends CommonTest{
 		}
 	}
 
-	@Test
+	//@Test
     public void testSession() throws Exception{
         
         try(SqlSession session = sqlFactory.openSession()){
@@ -37,5 +41,18 @@ public class MySQLTest extends CommonTest{
             e.printStackTrace();
         }
     }
+	
+	@Test
+	public void testQuery() {
+		try {
+			System.out.println("testQuery");
+			System.out.println("bny64@naver.com");
+			System.out.println("userDao : "+userDao.getUser("hi"));			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 	
 }
