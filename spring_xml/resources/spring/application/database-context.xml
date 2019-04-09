@@ -4,12 +4,16 @@
 	xsi:schemaLocation="
 	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
 	http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
-	<bean id="dataSource"
-		class="org.apache.commons.dbcp2.BasicDataSource">
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName"><value>${db.driver}</value></property>
 		<property name="url"><value>${db.url}</value></property>
 		<property name="username"><value>${db.username}</value></property>
-		<property name="password"><value>${db.password}</value></property>
+		<property name="password"><value>${db.password}</value></property>		
 	</bean>
-	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>        
+        <!-- ref는 dataSource라는 id 혹은 이름을 가진 bean을 생성자의 인자로 넘겨주겠다는 뜻. -->
+    </bean>
+    <!-- dataSource는 mysql에서 사용할 connection에 대한 정보 -->
+    <!-- sqlSessionFactory는 query를 날릴 때 사용할 세션에 대한 정보 -->
 </beans>
