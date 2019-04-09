@@ -1,7 +1,6 @@
 package com.bny.dao;
 
 import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.bny.dto.User;
@@ -11,9 +10,9 @@ public class UserDaoImpl extends CommonDao implements UserDao{
 
 	
 	public SqlSessionTemplate sqlSessionTemplate;
-	
+		
 	public UserDaoImpl() {
-		setNameSpace("com.bny.dao.user");
+		setNameSpace("com.bny.dao.UserDao");
 	}
 
 	@Override

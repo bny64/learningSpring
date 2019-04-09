@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.bny.dao.UserDao;
+import com.bny.dto.User;
 
 public class MySQLTest extends CommonTest{
 	
@@ -47,7 +48,8 @@ public class MySQLTest extends CommonTest{
 		try {
 			System.out.println("testQuery");
 			System.out.println("bny64@naver.com");
-			System.out.println("userDao : "+userDao.getUser("hi"));			
+			User user = userDao.getUser("bny64@naver.com");
+			System.out.println(user.getAge());
 			
 		}catch(Exception e) {
 			e.printStackTrace();
