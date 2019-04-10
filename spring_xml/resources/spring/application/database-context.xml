@@ -4,13 +4,17 @@
 	xsi:schemaLocation="
 	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
 	http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
-	
+	<!-- BasicDataSource를 사용하기 위한 라이브러리 : dbcp2, pool2 (자바 버전 7 이상)
+	dbcp2 -> connection pool 라이브러리 : 관리
+	-->
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName"><value>${db.driver}</value></property>
 		<property name="url"><value>${db.url}</value></property>
 		<property name="username"><value>${db.username}</value></property>
 		<property name="password"><value>${db.password}</value></property>		
 	</bean>
+	
+	<!-- mybatis 스프링 연동 모듈 : dataSource를 필요로 한다. -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="configLocation" value="classpath:mybatis/config/mysql-config.xml"/>                
         <property name="mapperLocations" value="classpath:mybatis/mapper/*_mapper.xml"/>

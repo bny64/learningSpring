@@ -50,6 +50,7 @@ public class MySQLTest extends CommonTest{
 			System.out.println("bny64@naver.com");
 			User user = userDao.getUser("bny64@naver.com");
 			System.out.println(user.getAge());
+			System.out.println(user.getCreatedAt());
 			
 		}catch(Exception e) {
 			e.printStackTrace();
