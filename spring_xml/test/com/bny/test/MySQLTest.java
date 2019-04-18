@@ -46,8 +46,6 @@ public class MySQLTest extends CommonTest{
 	@Test
 	public void testQuery() {
 		try {
-			System.out.println("testQuery");
-			System.out.println("bny64@naver.com");
 			User user = userDao.getUser("bny64@naver.com");
 			System.out.println(user.getAge());
 			System.out.println(user.getCreatedAt());

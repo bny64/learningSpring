@@ -4,7 +4,7 @@
   "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
   
   <tiles-definitions>
-  	<definition name="layout1" template="/WEB-INF/views/layout/layout1.jsp">
+  	<definition name="layout" template="/WEB-INF/views/layout/layout.jsp">
   		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp"/>
   		<put-attribute name="headerInclude" value="/WEB-INF/views/layout/headerInclude.jsp"/>
   		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp"/>
@@ -12,7 +12,7 @@
   		<put-attribute name="script" value="/WEB-INF/views/layout/script.jsp"/>
   	</definition>
   	
-  	<definition name="index" extends="layout1">
+  	<definition name="index" extends="layout">
   		<put-attribute name="body" value="/index.jsp"/>
   	</definition>
   	
