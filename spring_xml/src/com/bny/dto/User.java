@@ -3,21 +3,28 @@ package com.bny.dto;
 
 public class User {
 	
-	private int index;
-	private String email;
-	private String userPass;
-	private String userName;
-	private int age;
 	private String userKey;
-	private String createdAt;
-	private String updatedAt;
+	private String id;
+	private String email;
+	private String password;
+	private String userName;
 	private String usedType;
-	
-	public int getIndex() {
-		return index;
+	private String phoneNumber;
+	private String profilePath;
+	private char emailYn;
+	private String birth;
+	private String intMySelf;
+	public String getUserKey() {
+		return userKey;
 	}
-	public void setIndex(int index) {
-		this.index = index;
+	public void setUserKey(String userKey) {
+		this.userKey = userKey;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getEmail() {
 		return email;
@@ -25,11 +32,11 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getUserPass() {
-		return userPass;
+	public String getPassword() {
+		return password;
 	}
-	public void setUserPass(String userPass) {
-		this.userPass = userPass;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getUserName() {
 		return userName;
@@ -37,35 +44,41 @@ public class User {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-	public String getUserKey() {
-		return userKey;
-	}
-	public void setUserKey(String userKey) {
-		this.userKey = userKey;
-	}
-	public String getCreatedAt() {
-		return createdAt;
-	}
-	public void setCreatedAt(String createdAt) {
-		this.createdAt = createdAt;
-	}
-	public String getUpdatedAt() {
-		return updatedAt;
-	}
-	public void setUpdatedAt(String updatedAt) {
-		this.updatedAt = updatedAt;
-	}
 	public String getUsedType() {
 		return usedType;
 	}
 	public void setUsedType(String usedType) {
 		this.usedType = usedType;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public String getProfilePath() {
+		return profilePath;
+	}
+	public void setProfilePath(String profilePath) {
+		this.profilePath = profilePath;
+	}
+	public char getEmailYn() {
+		return emailYn;
+	}
+	public void setEmailYn(char emailYn) {
+		this.emailYn = emailYn;
+	}
+	public String getBirth() {
+		return birth;
+	}
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+	public String getIntMySelf() {
+		return intMySelf;
+	}
+	public void setIntMySelf(String intMySelf) {
+		this.intMySelf = intMySelf;
 	}
 	
 	

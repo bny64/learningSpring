@@ -1,8 +1,10 @@
-package com.bny.dao;
+package com.bny.dao.impl;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.bny.dao.CommonDao;
+import com.bny.dao.UserDao;
 import com.bny.dto.User;
 
 @Repository
@@ -16,9 +18,9 @@ public class UserDaoImpl extends CommonDao implements UserDao{
 	}
 
 	@Override
-	public User getUser(String email) throws Exception{
-		System.out.println("email~~~~~~~~~~");
-		return sqlSessionTemplate.selectOne(getNameSpace() + ".getUser");
+	public int insertUser(User user) throws Exception {
+		return sqlSessionTemplate.insert(getNameSpace()+".insertUser", user);		
 	}
+
 	
 }

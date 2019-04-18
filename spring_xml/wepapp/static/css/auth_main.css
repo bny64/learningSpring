@@ -483,3 +483,19 @@ iframe {
     padding-top: 20px
   }
 }
+
+div.datepicker {
+  height : 125px !important;
+}
+
+div > textarea.input100 {
+  height : 125px !important;
+}
+
+span.emailAd {  
+  margin-left:10%;
+  font-family: Oswald-Medium;
+  font-size: 16px;
+  color: #43383e;
+  line-height: 1.2;
+}

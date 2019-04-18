@@ -16,6 +16,15 @@
   		<put-attribute name="body" value="/index.jsp"/>
   	</definition>
   	
+  	<definition name="auth_layout" template="/WEB-INF/views/layout/auth_layout.jsp">
+  		<put-attribute name="headerInclude" value="/WEB-INF/views/layout/auth_headerInclude.jsp"/>
+  		<put-attribute name="body" value=""/>
+  		<put-attribute name="script" value="/WEB-INF/views/layout/auth_script.jsp"/>
+  	</definition>
+  	
+  	<definition name="auth/*" extends="auth_layout">
+  		<put-attribute name="body" value="/WEB-INF/views/auth/{1}.jsp"/>
+  	</definition>
   	<!-- <definition name="*" extends="layout1">
   		<put-attribute name="body" value="/WEB-INF/views/{1}.jsp"/>
   	</definition>

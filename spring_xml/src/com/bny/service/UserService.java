@@ -1,10 +1,9 @@
-package com.bny.dao;
+package com.bny.service;
 
 import com.bny.dto.User;
 
+public interface UserService {
 
-public interface UserDao {
-	
 	public int insertUser(User user) throws Exception;
 	
 }

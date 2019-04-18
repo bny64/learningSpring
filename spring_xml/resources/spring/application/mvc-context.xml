@@ -21,5 +21,5 @@
 	<mvc:resources location="/static/js/**" mapping="/js/**"/>
 	<mvc:resources location="/static/sass/**" mapping="/sass/**"/>
 	<mvc:resources location="/static/publishing/**" mapping="/publishing/**"/>
-	
+	<mvc:resources location="/static/vendor/**" mapping="/vendor/**"/>
 </beans>
