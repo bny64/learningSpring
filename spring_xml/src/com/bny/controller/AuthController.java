@@ -15,9 +15,8 @@ import com.bny.service.UserService;
 @RequestMapping(value="/auth")
 public class AuthController {
 	
-	//오류 부분
-	/*@Autowired
-	private UserService userService;*/
+	//오류 부분	
+	private UserService userService;
 	
 	@RequestMapping(value="/join", method=RequestMethod.GET)
 	public ModelAndView joinView(ModelAndView mnv) {
@@ -26,7 +25,7 @@ public class AuthController {
 		return mnv;
 	}
 	
-	/*@RequestMapping(value="/join", method=RequestMethod.POST)
+	@RequestMapping(value="/join", method=RequestMethod.POST)
 	public ModelAndView joinMember(ModelAndView mnv, HttpServletRequest request) {
 		
 		System.out.println("join:post");
@@ -55,5 +54,5 @@ public class AuthController {
 		
 		mnv.setViewName("index");
 		return mnv;
-	}*/
+	}
 }
