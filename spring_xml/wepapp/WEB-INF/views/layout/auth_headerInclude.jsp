@@ -24,5 +24,6 @@
 	<link rel="stylesheet" type="text/css" href="/spring_xml/css/auth_util.css">
 	<link rel="stylesheet" type="text/css" href="/spring_xml/css/auth_main.css">
 <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/spring_xml/css/jquery-ui.css">
 <script src="/spring_xml/vendor/jquery/jquery-3.2.1.min.js"></script>
 <script src="/spring_xml/js/common/jquery-ui.js"> </script>

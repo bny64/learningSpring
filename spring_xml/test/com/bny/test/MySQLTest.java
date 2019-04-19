@@ -7,19 +7,18 @@ import javax.sql.DataSource;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import com.bny.dao.UserDao;
-import com.bny.dto.User;
 
 public class MySQLTest extends CommonTest{
 	
 	@Autowired
 	private DataSource ds;
 	@Autowired
-	private SqlSessionFactory sqlFactory;
-	@Autowired
-	UserDao userDao;	
+	private SqlSessionFactory sqlFactory;	
+	
+	private static Logger logger = LoggerFactory.getLogger(MySQLTest.class);
 	
 	//@Test
 	public void testConnection(){
@@ -46,8 +45,7 @@ public class MySQLTest extends CommonTest{
 	@Test
 	public void testQuery() {
 		try {
-			
-			
+			logger.info("hello");			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

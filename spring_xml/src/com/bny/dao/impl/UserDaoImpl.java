@@ -9,7 +9,6 @@ import com.bny.dto.User;
 
 @Repository
 public class UserDaoImpl extends CommonDao implements UserDao{
-
 	
 	public SqlSessionTemplate sqlSessionTemplate;
 		

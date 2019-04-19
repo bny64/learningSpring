@@ -11,11 +11,13 @@ import org.springframework.web.portlet.ModelAndView;
 import com.bny.dto.User;
 import com.bny.service.UserService;
 
+
 @Controller
 @RequestMapping(value="/auth")
 public class AuthController {
 	
 	//오류 부분	
+	@Autowired
 	private UserService userService;
 	
 	@RequestMapping(value="/join", method=RequestMethod.GET)

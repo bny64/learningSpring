@@ -1,0 +1,573 @@
+â–¶ INFO  10:21:11.747 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  10:21:11.867 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  10:21:11.886 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  10:21:11.996 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  10:21:12.011 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@6a04ae: startup date [Fri Apr 19 10:21:12 KST 2019]; root of context hierarchy
+â–¶ INFO  10:21:12.212 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  10:21:12.213 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 10:21:12.478 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@21e361] to prepare test instance [com.bny.test.MySQLTest@1d4cd39]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.bny.service.UserService com.bny.controller.AuthController.userService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.bny.service.UserService com.bny.controller.AuthController.userService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 41 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 43 common frames omitted
+â–¶ INFO  10:22:32.325 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  10:22:32.406 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  10:22:32.426 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  10:22:32.540 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  10:22:32.553 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@6a04ae: startup date [Fri Apr 19 10:22:32 KST 2019]; root of context hierarchy
+â–¶ INFO  10:22:32.736 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  10:22:32.737 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 10:22:32.996 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@21e361] to prepare test instance [com.bny.test.MySQLTest@1d4cd39]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.bny.service.UserService com.bny.controller.AuthController.userService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.bny.service.UserService com.bny.controller.AuthController.userService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 41 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 43 common frames omitted
+â–¶ INFO  10:27:32.483 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  10:27:32.576 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  10:27:32.620 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  10:27:32.730 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  10:27:32.744 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@6a04ae: startup date [Fri Apr 19 10:27:32 KST 2019]; root of context hierarchy
+â–¶ INFO  10:27:32.930 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  10:27:32.931 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 10:27:32.973 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1bb5034] to prepare test instance [com.bny.test.MySQLTest@1741d6d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tilesConfigurer' defined in class path resource [spring/root/root-context.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.apache.tiles.request.ApplicationAccess.register(ApplicationAccess.java:50)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:62)
+	at org.springframework.web.servlet.view.tiles3.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 40 common frames omitted
+¢º INFO  10:28:03.495 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:272] - Root WebApplicationContext: initialization started
+¢º INFO  10:28:03.690 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing Root WebApplicationContext: startup date [Fri Apr 19 10:28:03 KST 2019]; root of context hierarchy
+¢º INFO  10:28:03.811 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\database-context.xml]
+¢º INFO  10:28:03.906 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\mvc-context.xml]
+¢º INFO  10:28:04.113 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\view-context.xml]
+¢º WARN  10:28:04.467 [main] org.mybatis.spring.mapper.ClassPathMapperScanner[warn:44] - No MyBatis mapper was found in '[com.bny.dao]' package. Please check your configuration.
+¢º ERROR 10:28:04.821 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:318] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\database-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\mybatis\mapper\user_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\mybatis\mapper\user_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.bny.dto.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.bny.dto.User
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:681)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:381)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:293)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4643)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5109)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:742)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:718)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:703)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:630)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1840)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(Unknown Source)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:525)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:424)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1585)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:308)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:424)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:367)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:966)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:839)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1427)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1417)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(Unknown Source)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:943)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:258)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:770)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:682)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:350)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\mybatis\mapper\user_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\mybatis\mapper\user_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.bny.dto.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.bny.dto.User
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:534)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:424)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 53 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\mybatis\mapper\user_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.bny.dto.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.bny.dto.User
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:532)
+	... 56 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.bny.dto.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.bny.dto.User
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:76)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:137)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:130)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	... 58 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.bny.dto.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.bny.dto.User
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 62 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.bny.dto.User
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 64 common frames omitted
+¢º INFO  10:36:05.531 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:272] - Root WebApplicationContext: initialization started
+¢º INFO  10:36:05.732 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing Root WebApplicationContext: startup date [Fri Apr 19 10:36:05 KST 2019]; root of context hierarchy
+¢º INFO  10:36:05.851 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\database-context.xml]
+¢º INFO  10:36:05.949 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\mvc-context.xml]
+¢º INFO  10:36:06.217 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\view-context.xml]
+¢º ERROR 10:36:07.120 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:318] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.bny.service.UserService com.bny.controller.AuthController.userService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:381)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:293)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4643)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5109)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:742)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:718)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:703)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:630)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1840)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(Unknown Source)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:525)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:424)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1585)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:308)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:424)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:367)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:966)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:839)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1427)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1417)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(Unknown Source)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:943)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:258)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:770)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:682)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:350)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.bny.service.UserService com.bny.controller.AuthController.userService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 54 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 56 common frames omitted
+¢º INFO  10:38:53.031 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:272] - Root WebApplicationContext: initialization started
+¢º INFO  10:38:53.221 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing Root WebApplicationContext: startup date [Fri Apr 19 10:38:53 KST 2019]; root of context hierarchy
+¢º INFO  10:38:53.340 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\database-context.xml]
+¢º INFO  10:38:53.435 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\mvc-context.xml]
+¢º INFO  10:38:53.697 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\view-context.xml]
+¢º ERROR 10:38:54.588 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:318] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.bny.service.UserService com.bny.controller.AuthController.userService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:381)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:293)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4643)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5109)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:742)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:718)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:703)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:630)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1840)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(Unknown Source)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:525)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:424)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1585)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:308)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:424)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:367)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:966)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:839)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1427)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1417)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(Unknown Source)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:943)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:258)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:770)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:682)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:350)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.bny.service.UserService com.bny.controller.AuthController.userService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 54 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 56 common frames omitted
+¢º INFO  10:40:56.691 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:272] - Root WebApplicationContext: initialization started
+¢º INFO  10:40:56.891 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing Root WebApplicationContext: startup date [Fri Apr 19 10:40:56 KST 2019]; root of context hierarchy
+¢º INFO  10:40:57.009 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\database-context.xml]
+¢º INFO  10:40:57.104 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\mvc-context.xml]
+¢º INFO  10:40:57.374 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\view-context.xml]
+¢º ERROR 10:40:58.296 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:318] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.bny.service.UserService com.bny.controller.AuthController.userService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:381)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:293)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4643)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5109)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:742)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:718)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:703)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:630)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1840)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(Unknown Source)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:525)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:424)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1585)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:308)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:424)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:367)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:966)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:839)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1427)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1417)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(Unknown Source)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:943)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:258)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:770)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:682)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:350)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.bny.service.UserService com.bny.controller.AuthController.userService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 54 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.bny.service.UserService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 56 common frames omitted
+¢º INFO  10:44:45.509 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:272] - Root WebApplicationContext: initialization started
+¢º INFO  10:44:45.698 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing Root WebApplicationContext: startup date [Fri Apr 19 10:44:45 KST 2019]; root of context hierarchy
+¢º INFO  10:44:45.817 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\database-context.xml]
+¢º INFO  10:44:45.908 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\mvc-context.xml]
+¢º INFO  10:44:46.187 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\view-context.xml]
+¢º INFO  10:44:47.288 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinView(org.springframework.web.portlet.ModelAndView)
+¢º INFO  10:44:47.289 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinMember(org.springframework.web.portlet.ModelAndView,javax.servlet.http.HttpServletRequest)
+¢º INFO  10:44:47.289 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.IndexController.TestController(org.springframework.web.servlet.ModelAndView)
+¢º INFO  10:44:47.656 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+¢º INFO  10:44:47.659 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+¢º INFO  10:44:47.661 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+¢º INFO  10:44:47.665 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#3'
+¢º INFO  10:44:47.668 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/sass/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#4'
+¢º INFO  10:44:47.673 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/publishing/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#5'
+¢º INFO  10:44:47.678 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/vendor/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#6'
+¢º INFO  10:44:47.766 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:312] - Root WebApplicationContext: initialization completed in 2251 ms
+¢º INFO  10:44:47.826 [main] org.springframework.web.servlet.DispatcherServlet[initServletBean:461] - FrameworkServlet 'dispatcherServlet': initialization started
+¢º INFO  10:44:47.830 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Fri Apr 19 10:44:47 KST 2019]; parent: Root WebApplicationContext
+¢º INFO  10:44:47.832 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from URL [file:/D:/spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32/sts-bundle/pivotal-tc-server/instances/base-instance/wtpwebapps/spring_xml/WEB-INF/classes/spring/root/root-context.xml]
+¢º INFO  10:44:47.879 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\common.properties]
+¢º INFO  10:44:47.880 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\jdbc.properties]
+¢º INFO  10:44:48.039 [main] org.springframework.web.servlet.view.tiles3.TilesConfigurer[createEvaluator:399] - Found JSP 2.1 ExpressionFactory
+¢º INFO  10:44:48.077 [main] org.apache.tiles.access.TilesAccess[setContainer:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+¢º INFO  10:44:48.086 [main] org.springframework.web.servlet.DispatcherServlet[initServletBean:480] - FrameworkServlet 'dispatcherServlet': initialization completed in 260 ms
+¢º INFO  10:51:35.051 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:272] - Root WebApplicationContext: initialization started
+¢º INFO  10:51:35.241 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing Root WebApplicationContext: startup date [Fri Apr 19 10:51:35 KST 2019]; root of context hierarchy
+¢º INFO  10:51:35.360 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\database-context.xml]
+¢º INFO  10:51:35.451 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\mvc-context.xml]
+¢º INFO  10:51:35.728 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\view-context.xml]
+¢º INFO  10:51:36.857 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinView(org.springframework.web.portlet.ModelAndView)
+¢º INFO  10:51:36.858 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinMember(org.springframework.web.portlet.ModelAndView,javax.servlet.http.HttpServletRequest)
+¢º INFO  10:51:36.858 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.IndexController.TestController(org.springframework.web.servlet.ModelAndView)
+¢º INFO  10:51:37.231 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+¢º INFO  10:51:37.233 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+¢º INFO  10:51:37.236 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+¢º INFO  10:51:37.240 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#3'
+¢º INFO  10:51:37.243 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/sass/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#4'
+¢º INFO  10:51:37.248 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/publishing/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#5'
+¢º INFO  10:51:37.253 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/vendor/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#6'
+¢º INFO  10:51:37.337 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:312] - Root WebApplicationContext: initialization completed in 2279 ms
+¢º INFO  10:51:37.391 [main] org.springframework.web.servlet.DispatcherServlet[initServletBean:461] - FrameworkServlet 'dispatcherServlet': initialization started
+¢º INFO  10:51:37.395 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Fri Apr 19 10:51:37 KST 2019]; parent: Root WebApplicationContext
+¢º INFO  10:51:37.397 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from URL [file:/D:/spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32/sts-bundle/pivotal-tc-server/instances/base-instance/wtpwebapps/spring_xml/WEB-INF/classes/spring/root/root-context.xml]
+¢º INFO  10:51:37.443 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\common.properties]
+¢º INFO  10:51:37.444 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\jdbc.properties]
+¢º INFO  10:51:37.601 [main] org.springframework.web.servlet.view.tiles3.TilesConfigurer[createEvaluator:399] - Found JSP 2.1 ExpressionFactory
+¢º INFO  10:51:37.639 [main] org.apache.tiles.access.TilesAccess[setContainer:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+¢º INFO  10:51:37.648 [main] org.springframework.web.servlet.DispatcherServlet[initServletBean:480] - FrameworkServlet 'dispatcherServlet': initialization completed in 257 ms
+¢º WARN  10:51:58.633 [tomcat-http--15] org.springframework.web.servlet.PageNotFound[noHandlerFound:1118] - No mapping found for HTTP request with URI [/spring_xml/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+¢º INFO  10:52:38.182 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:272] - Root WebApplicationContext: initialization started
+¢º INFO  10:52:38.385 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing Root WebApplicationContext: startup date [Fri Apr 19 10:52:38 KST 2019]; root of context hierarchy
+¢º INFO  10:52:38.515 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\database-context.xml]
+¢º INFO  10:52:38.620 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\mvc-context.xml]
+¢º INFO  10:52:38.927 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\view-context.xml]
+¢º INFO  10:52:40.052 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinView(org.springframework.web.portlet.ModelAndView)
+¢º INFO  10:52:40.053 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinMember(org.springframework.web.portlet.ModelAndView,javax.servlet.http.HttpServletRequest)
+¢º INFO  10:52:40.053 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.IndexController.TestController(org.springframework.web.servlet.ModelAndView)
+¢º INFO  10:52:40.429 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+¢º INFO  10:52:40.431 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+¢º INFO  10:52:40.434 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+¢º INFO  10:52:40.438 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#3'
+¢º INFO  10:52:40.442 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/sass/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#4'
+¢º INFO  10:52:40.446 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/publishing/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#5'
+¢º INFO  10:52:40.451 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/vendor/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#6'
+¢º INFO  10:52:40.541 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:312] - Root WebApplicationContext: initialization completed in 2351 ms
+¢º INFO  10:52:40.593 [main] org.springframework.web.servlet.DispatcherServlet[initServletBean:461] - FrameworkServlet 'dispatcherServlet': initialization started
+¢º INFO  10:52:40.597 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Fri Apr 19 10:52:40 KST 2019]; parent: Root WebApplicationContext
+¢º INFO  10:52:40.599 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from URL [file:/D:/spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32/sts-bundle/pivotal-tc-server/instances/base-instance/wtpwebapps/spring_xml/WEB-INF/classes/spring/root/root-context.xml]
+¢º INFO  10:52:40.643 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\common.properties]
+¢º INFO  10:52:40.644 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\jdbc.properties]
+¢º INFO  10:52:40.796 [main] org.springframework.web.servlet.view.tiles3.TilesConfigurer[createEvaluator:399] - Found JSP 2.1 ExpressionFactory
+¢º INFO  10:52:40.835 [main] org.apache.tiles.access.TilesAccess[setContainer:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+¢º INFO  10:52:40.844 [main] org.springframework.web.servlet.DispatcherServlet[initServletBean:480] - FrameworkServlet 'dispatcherServlet': initialization completed in 250 ms

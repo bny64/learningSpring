@@ -2,7 +2,7 @@
 <div class="limiter">
 	<div class="container-login100">
 		<div class="wrap-login100 p-b-30">
-			<form class="login100-form validate-form" action="/auth/join" method="POST">
+			<form class="login100-form validate-form" action="/spring_xml/auth/join" method="POST">
 				<span class="login100-form-title">Join</span>
 				<div></div>
 				<div class="text-center p-t-55 p-b-30">
