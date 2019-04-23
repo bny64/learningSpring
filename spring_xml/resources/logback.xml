@@ -56,7 +56,7 @@
     </appender> -->
         
     <!-- 이 아래에 있는 애들 다 log로 찍겠다. -->
-    <logger name="com.bny" level="info">
+    <logger name="com.bny" level="debug">
         <appender-ref ref="fileForLoginInterceptor"/>
     </logger>
     

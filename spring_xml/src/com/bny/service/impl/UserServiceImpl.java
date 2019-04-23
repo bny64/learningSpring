@@ -14,10 +14,21 @@ public class UserServiceImpl implements UserService{
 	private UserDao userDao;
 	
 	@Override
-	public int insertUser(User user) throws Exception {
-		int result = userDao.insertUser(user);
-		return result;
+	public int selectUserById(String id) throws Exception {
+		return userDao.selectUserById(id);
 	}
+
+	@Override
+	public int selectUserByEmail(String email) throws Exception {
+		return userDao.selectUserById(email);
+	}
+	
+	@Override
+	public int insertUser(User user) throws Exception{	
+		return userDao.insertUser(user);	
+	}
+
+	
 
 	
 }

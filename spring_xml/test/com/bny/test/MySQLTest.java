@@ -11,6 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.bny.service.UserService;
+
 public class MySQLTest extends CommonTest{
 	
 	@Autowired
@@ -18,9 +20,12 @@ public class MySQLTest extends CommonTest{
 	@Autowired
 	private SqlSessionFactory sqlFactory;	
 	
+	@Autowired
+	private UserService userService;
+	
 	private static Logger logger = LoggerFactory.getLogger(MySQLTest.class);
 	
-	//@Test
+	@Test
 	public void testConnection(){
 		System.out.println("hello");
 		try(Connection con = ds.getConnection()){
@@ -30,7 +35,7 @@ public class MySQLTest extends CommonTest{
 		}
 	}
 
-	//@Test
+	@Test
     public void testSession() throws Exception{
         
         try(SqlSession session = sqlFactory.openSession()){
@@ -42,10 +47,13 @@ public class MySQLTest extends CommonTest{
         }
     }
 	
-	@Test
+	//@Test
 	public void testQuery() {
 		try {
-			logger.info("hello");			
+			int result = userService.selectUserById("bny64");
+			logger.debug("{}", result);
+			int result2 = userService.selectUserById("qoskaduf");
+			logger.debug("{}", result2);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

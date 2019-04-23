@@ -14,10 +14,10 @@
    	<property name="viewResolvers">
    		<list>
    			<!-- tiles viewResolver에 대한 설정. -->
-   			<bean class="org.springframework.web.servlet.view.tiles3.TilesViewResolver">
+   			<!-- <bean class="org.springframework.web.servlet.view.tiles3.TilesViewResolver">
    				<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
    				<property name="order" value="0"/>
-   			</bean>
+   			</bean> -->
    			<!-- 일반 viewResolver에 대한 설정. -->
    			<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		     	<property name="prefix" value="/WEB-INF/views/" />
