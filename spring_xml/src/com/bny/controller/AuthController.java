@@ -41,10 +41,9 @@ public class AuthController {
 		logger.debug("AuthController : post - /join");
 				
 		User user = new User();
-		
-		//user.setUserKey(request.getParameter("email"));
+				
 		user.setId(request.getParameter("id"));
-		/*user.setEmail(request.getParameter("email"));
+		user.setEmail(request.getParameter("email"));
 		user.setPassword(request.getParameter("pass"));
 		user.setProfilePath("");
 		user.setBirth(request.getParameter("birthday"));
@@ -52,7 +51,7 @@ public class AuthController {
 		user.setIntMySelf(request.getParameter("introduction"));
 		user.setPhoneNumber(request.getParameter("phoneNumber"));
 		user.setUserName(request.getParameter("name"));
-		user.setUsedType("spring_xml");*/
+		user.setUsedType("spring_xml");
 		
 		boolean result = false;
 		logger.debug(user.getId());
@@ -60,6 +59,8 @@ public class AuthController {
 		
 		result = userService.selectUserById(user.getId()) == 0 ? false : true;
 		if(result) {
+			response.setContentType("text/html");
+			response.setCharacterEncoding("UTF-8");
 			response.getWriter().println("<script language='javascript'>alert('아이디가 중복됩니다.'); history.back();</script>");
 			return null;
 		}
@@ -67,6 +68,7 @@ public class AuthController {
 		result = userService.selectUserByEmail(user.getEmail()) == 0 ? false : true;
 		
 		if(result) {
+			
 			response.getWriter().println("<script language='javascript'>alert('이메일이 중복됩니다.'); history.back();</script>");
 			return null;
 		}
