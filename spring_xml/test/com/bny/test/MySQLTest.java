@@ -47,13 +47,13 @@ public class MySQLTest extends CommonTest{
         }
     }
 	
-	//@Test
+	@Test
 	public void testQuery() {
 		try {
 			int result = userService.selectUserById("bny64");
-			logger.debug("{}", result);
+			logger.debug("### {}", result);
 			int result2 = userService.selectUserById("qoskaduf");
-			logger.debug("{}", result2);
+			logger.debug("### {}", result2);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
