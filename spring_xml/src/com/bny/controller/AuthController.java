@@ -1,8 +1,6 @@
 package com.bny.controller;
 
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.Map;
+import java.security.MessageDigest;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,14 +9,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.portlet.ModelAndView;
 
 import com.bny.dto.User;
 import com.bny.service.UserService;
-
+import com.bny.util.Crypto;
 
 @Controller
 @RequestMapping(value="/auth")
@@ -28,6 +25,8 @@ public class AuthController {
 	
 	@Autowired
 	private UserService userService;
+	
+	private Crypto crypto;
 	
 	@RequestMapping(value="/join", method=RequestMethod.GET)
 	public ModelAndView joinView(ModelAndView mnv) {
@@ -40,11 +39,14 @@ public class AuthController {
 	public ModelAndView joinMember(ModelAndView mnv, HttpServletRequest request, HttpServletResponse response) throws Exception{
 		logger.debug("AuthController : post - /join");
 				
-		User user = new User();
-				
-		user.setId(request.getParameter("id"));
-		user.setEmail(request.getParameter("email"));
-		user.setPassword(request.getParameter("pass"));
+		User user = new User();	
+		crypto = new Crypto();
+		
+		String userId = request.getParameter("id");
+		user.setId(userId);
+		user.setUserKey(crypto.saltSHA1(userId));		
+		user.setPassword(crypto.hashSHA256(request.getParameter("pass")));
+		user.setEmail(request.getParameter("email"));		
 		user.setProfilePath("");
 		user.setBirth(request.getParameter("birthday"));
 		user.setEmailYn(request.getParameter("emailYn").charAt(0));
@@ -52,10 +54,8 @@ public class AuthController {
 		user.setPhoneNumber(request.getParameter("phoneNumber"));
 		user.setUserName(request.getParameter("name"));
 		user.setUsedType("spring_xml");
-		
-		boolean result = false;
-		logger.debug(user.getId());
-		logger.debug("{}", userService.selectUserById(user.getId()));
+						
+		boolean result = false;		
 		
 		result = userService.selectUserById(user.getId()) == 0 ? false : true;
 		if(result) {
@@ -65,10 +65,12 @@ public class AuthController {
 			return null;
 		}
 		
+		
 		result = userService.selectUserByEmail(user.getEmail()) == 0 ? false : true;
 		
 		if(result) {
-			
+			response.setContentType("text/html");
+			response.setCharacterEncoding("UTF-8");
 			response.getWriter().println("<script language='javascript'>alert('이메일이 중복됩니다.'); history.back();</script>");
 			return null;
 		}

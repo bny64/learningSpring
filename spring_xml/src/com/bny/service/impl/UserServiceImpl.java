@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public int selectUserByEmail(String email) throws Exception {
-		return userDao.selectUserById(email);
+		return userDao.selectUserByEmail(email);
 	}
 	
 	@Override

@@ -81,6 +81,10 @@ public class User {
 		this.intMySelf = intMySelf;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return userKey + ":" + id + ":"+email+":"+password+":"+userName+":"+usedType+":";
+	}
 	
 }

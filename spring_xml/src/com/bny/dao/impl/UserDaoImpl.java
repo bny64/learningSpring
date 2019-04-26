@@ -20,20 +20,18 @@ public class UserDaoImpl extends CommonDao implements UserDao{
 	}	
 
 	@Override
-	public int selectUserById(String id) throws Exception {
-		logger.debug("id : {}", id);
-		int result = sqlSessionTemplate.selectOne(getNameSpace()+".selectUserById", id);
-		logger.debug("result : {}", result);
+	public int selectUserById(String id) throws Exception {		
+		int result = sqlSessionTemplate.selectOne(getNameSpace()+".selectUserById", id);		
 		return result;
 	}
 
 	@Override
-	public int selectUserByEmail(String email) throws Exception {
+	public int selectUserByEmail(String email) throws Exception {		
 		return sqlSessionTemplate.selectOne(getNameSpace()+".selectUserByEmail", email);
 	}
 	
 	@Override
-	public int insertUser(User user) throws Exception {
+	public int insertUser(User user) throws Exception {		
 		return sqlSessionTemplate.insert(getNameSpace()+".insertUser", user);		
 	}
 
