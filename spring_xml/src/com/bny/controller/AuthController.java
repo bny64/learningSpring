@@ -1,7 +1,5 @@
 package com.bny.controller;
 
-import java.security.MessageDigest;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,7 +13,7 @@ import org.springframework.web.portlet.ModelAndView;
 
 import com.bny.dto.User;
 import com.bny.service.UserService;
-import com.bny.util.Crypto;
+import com.bny.util.Security;
 
 @Controller
 @RequestMapping(value="/auth")
@@ -26,7 +24,7 @@ public class AuthController {
 	@Autowired
 	private UserService userService;
 	
-	private Crypto crypto;
+	private Security security;
 	
 	@RequestMapping(value="/join", method=RequestMethod.GET)
 	public ModelAndView joinView(ModelAndView mnv) {
@@ -40,12 +38,12 @@ public class AuthController {
 		logger.debug("AuthController : post - /join");
 				
 		User user = new User();	
-		crypto = new Crypto();
+		security = new Security();
 		
 		String userId = request.getParameter("id");
 		user.setId(userId);
-		user.setUserKey(crypto.saltSHA1(userId));		
-		user.setPassword(crypto.hashSHA256(request.getParameter("pass")));
+		user.setUserKey(security.saltSHA1(userId));		
+		user.setPassword(security.hashSHA256(request.getParameter("pass")));
 		user.setEmail(request.getParameter("email"));		
 		user.setProfilePath("");
 		user.setBirth(request.getParameter("birthday"));

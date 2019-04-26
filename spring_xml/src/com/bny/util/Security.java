@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import com.bny.controller.AuthController;
 
-public class Crypto {
+public class Security {
 	
 	private static Logger logger = LoggerFactory.getLogger(AuthController.class);
 	
