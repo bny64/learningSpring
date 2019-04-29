@@ -10,8 +10,8 @@
 		SELECT COUNT(id) FROM users WHERE `email`=#{email}
 	</select>
 	<insert id="insertUser" parameterType="com.bny.dto.User">
-		INSERT INTO users (userKey, id, email, password, userName, usedType, phoneNumber, profilePath, emailYn, birth, intMySelf)
-		VALUES (#{userKey}, #{id}, #{email}, #{password}, #{userName}, #{usedType}, #{phoneNumber}, #{profilePath}, #{emailYn}, #{birth}, #{intMySelf})
+		INSERT INTO users (userKey, id, email, password, userName, usedType, phoneNumber, emailYn, birth, intMySelf)
+		VALUES (#{userKey}, #{id}, #{email}, #{password}, #{userName}, #{usedType}, #{phoneNumber}, #{emailYn}, #{birth}, #{intMySelf})
 	</insert>
 </mapper>
  

@@ -141,7 +141,7 @@
     });
 
     document.querySelector('#loginBtn').addEventListener('click',()=>{
-        location.href = "http://49.247.211.93:9001/login";
+        location.href = "http://localhost:8080/spring_xml/auth/login";
     });
 
 })();

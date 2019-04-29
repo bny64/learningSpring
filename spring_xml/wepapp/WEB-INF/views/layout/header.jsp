@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <header id="fh5co-header-section" class="sticky-banner">
 	<div class="container">
 		<div class="nav-header">
@@ -9,6 +10,14 @@
 			<!-- START #fh5co-menu-wrap -->
 			<nav id="fh5co-menu-wrap" role="navigation">
 				<ul class="sf-menu" id="fh5co-primary-menu">
+					<c:choose>
+						<c:when test="${userInfo eq null}">
+							<li><a href="/spring_xml/auth/login"> Login</a></li>
+						</c:when>
+						<c:otherwise>
+							<li><a id="logoutBtn" href="javacript:void(0);"> Logout</a></li>
+						</c:otherwise>
+					</c:choose>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="vacation.html" class="fh5co-sub-ddown">Vacations</a>
 						<ul class="fh5co-sub-menu">

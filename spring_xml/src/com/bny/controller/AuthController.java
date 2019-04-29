@@ -26,8 +26,15 @@ public class AuthController {
 	
 	private Security security;
 	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public ModelAndView joinMember(ModelAndView mnv) throws Exception{
+		logger.debug("AuthController : get - /login");
+		mnv.setViewName("auth/login");
+		return mnv;
+	}
+	
 	@RequestMapping(value="/join", method=RequestMethod.GET)
-	public ModelAndView joinView(ModelAndView mnv) {
+	public ModelAndView joinView(ModelAndView mnv) throws Exception{
 		logger.debug("AuthController : get - /join");
 		mnv.setViewName("auth/join");
 		return mnv;
@@ -45,7 +52,6 @@ public class AuthController {
 		user.setUserKey(security.saltSHA1(userId));		
 		user.setPassword(security.hashSHA256(request.getParameter("pass")));
 		user.setEmail(request.getParameter("email"));		
-		user.setProfilePath("");
 		user.setBirth(request.getParameter("birthday"));
 		user.setEmailYn(request.getParameter("emailYn").charAt(0));
 		user.setIntMySelf(request.getParameter("introduction"));
@@ -82,5 +88,10 @@ public class AuthController {
 		mnv.setViewName("index");
 		
 		return mnv;
+	}
+	
+	@RequestMapping(value="/join", method=RequestMethod.POST)
+	public ModelAndView loginMember(ModelAndView mnv, HttpServletRequest request, HttpServletResponse response) throws Exception{
+		return new ModelAndView();
 	}
 }
