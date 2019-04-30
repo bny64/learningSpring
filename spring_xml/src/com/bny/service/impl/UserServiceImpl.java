@@ -1,5 +1,7 @@
 package com.bny.service.impl;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,11 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public int insertUser(User user) throws Exception{	
 		return userDao.insertUser(user);	
+	}
+
+	@Override
+	public String selectUserByIdPass(Map<String, String> userInfo) throws Exception {		
+		return userDao.selectUserByIdPass(userInfo);
 	}
 
 	

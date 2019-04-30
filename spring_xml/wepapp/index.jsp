@@ -1,4 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:if test="${message ne null}">
+	<script type="text/javascript">		
+		alert("${message}");
+	</script>
+</c:if>
 <div class="fh5co-hero">
 		<div class="fh5co-overlay"></div>
 		<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">

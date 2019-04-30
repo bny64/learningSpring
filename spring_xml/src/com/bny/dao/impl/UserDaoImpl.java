@@ -1,5 +1,7 @@
 package com.bny.dao.impl;
 
+import java.util.Map;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,6 +35,11 @@ public class UserDaoImpl extends CommonDao implements UserDao{
 	@Override
 	public int insertUser(User user) throws Exception {		
 		return sqlSessionTemplate.insert(getNameSpace()+".insertUser", user);		
+	}
+
+	@Override
+	public String selectUserByIdPass(Map<String, String> userInfo) throws Exception {
+		return sqlSessionTemplate.selectOne(getNameSpace()+".selectUserByIdPass", userInfo);
 	}
 
 	

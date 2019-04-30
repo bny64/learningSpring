@@ -59,7 +59,7 @@ Facebook: 		https://www.facebook.com/fh5co
 <link rel='stylesheet' type='text/css' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 <!-- Modernizr JS -->
-<script src="/spring_xml/js/modernizr-2.6.2.min.js"></script>
+<script src="/spring_xml/js/common/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 <script src="/spring_xml/js/respond.min.js"></script>

@@ -1,7 +1,11 @@
 package com.bny.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +14,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.portlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.bny.dto.User;
 import com.bny.service.UserService;
@@ -41,7 +47,8 @@ public class AuthController {
 	}
 	
 	@RequestMapping(value="/join", method=RequestMethod.POST)
-	public ModelAndView joinMember(ModelAndView mnv, HttpServletRequest request, HttpServletResponse response) throws Exception{
+	public String joinMember(ModelAndView mnv, HttpServletRequest request, 
+			HttpServletResponse response, final RedirectAttributes message) throws Exception{
 		logger.debug("AuthController : post - /join");
 				
 		User user = new User();	
@@ -57,7 +64,7 @@ public class AuthController {
 		user.setIntMySelf(request.getParameter("introduction"));
 		user.setPhoneNumber(request.getParameter("phoneNumber"));
 		user.setUserName(request.getParameter("name"));
-		user.setUsedType("spring_xml");
+		user.setJoinedType("spring_xml");
 						
 		boolean result = false;		
 		
@@ -81,17 +88,42 @@ public class AuthController {
 		
 		result = userService.insertUser(user) == 0 ? false : true;
 		
-		if(result) {
-			mnv.addObject("message", "가입되었습니다. 로그인을 해주세요.");
-		}
-		
-		mnv.setViewName("index");
-		
-		return mnv;
+		if(!result) {
+			response.setContentType("text/html");
+			response.setCharacterEncoding("UTF-8");
+			response.getWriter().println("<script language='javascript'>alert('가입에 실패했습니다.'); history.back();</script>");
+			return null;
+		}else {
+			message.addFlashAttribute("message", "가입되었습니다. 로그인을 해주세요.");
+			return "redirect:/index";	
+		}		
 	}
 	
-	@RequestMapping(value="/join", method=RequestMethod.POST)
-	public ModelAndView loginMember(ModelAndView mnv, HttpServletRequest request, HttpServletResponse response) throws Exception{
-		return new ModelAndView();
+	@RequestMapping(value="/login", method=RequestMethod.POST)
+	public String loginMember(ModelAndView mnv, HttpServletRequest request, 
+			HttpServletResponse response, RedirectAttributes message) throws Exception{
+		logger.debug("AuthController : post - /login");
+		security = new Security();		
+		
+		Map<String, String> user = new HashMap<String, String>();
+		user.put("id", request.getParameter("id"));
+		user.put("password", security.hashSHA256(request.getParameter("password")));
+		
+		String userKey = userService.selectUserByIdPass(user);
+		if(userKey==null || "".equals(userKey)) {
+			response.setContentType("text/html");
+			response.setCharacterEncoding("UTF-8");
+			response.getWriter().println("<script language='javascript'>alert('ID혹은 비밀번호가 맞지 않습니다.'); history.back();</script>");
+			return null;
+		}else {
+			/**
+			 * JSP 기본 객체 내장 영역
+			 * 찾는 순서 context - request - session - application
+			 * 범위 큰 순서 application - session - request - context
+			 * */
+			message.addFlashAttribute("message", "로그인 되었습니다.");
+			request.getSession().setAttribute("userKey", userKey);			
+		}
+		return "redirect:/index";
 	}
 }

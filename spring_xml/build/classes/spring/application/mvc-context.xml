@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -25,4 +26,25 @@
 	<mvc:resources location="/static/sass/**" mapping="/sass/**"/>
 	<mvc:resources location="/static/publishing/**" mapping="/publishing/**"/>
 	<mvc:resources location="/static/vendor/**" mapping="/vendor/**"/>
+	
+	<mvc:default-servlet-handler/>
+	
+	<!-- error : root path 안 넣어서 에러 발생.
+	server에 설정된 root path가 /spring_xml이기 때문에
+	모든 context(환경설정)에서 포트 뒤에 있는 root path를 넣고 요청을 처리해야함.	
+	 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/spring_xml/**"/>			
+			<mvc:exclude-mapping path="/spring_xml/auth/**"/>
+			<mvc:exclude-mapping path="/spring_xml/css/**"/>
+			<mvc:exclude-mapping path="/spring_xml/fonts/**"/>
+			<mvc:exclude-mapping path="/spring_xml/images/**"/>
+			<mvc:exclude-mapping path="/spring_xml/js/**"/>
+			<mvc:exclude-mapping path="/spring_xml/sass/**"/>
+			<mvc:exclude-mapping path="/spring_xml/publishing/**"/>
+			<mvc:exclude-mapping path="/spring_xml/vendor/**"/>			
+			<bean class="com.bny.common.interceptor.AccessControlInterceptor"/>		
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>

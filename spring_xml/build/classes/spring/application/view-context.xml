@@ -29,8 +29,10 @@
    	</property>
    </bean>
    
-   <!-- servlet의 properties와  스프링 환경설정의 properties 서로 다르므로 root-context에서 프로퍼티를 설정해줬다고 해도 
-   스프링 환경설정에 사용할 properties bean을 다시 선언해 줘야한다.-->
+   <!--
+   error 발생 
+   servlet의 properties와  스프링 환경설정의 properties 서로 다르므로 root-context에서 프로퍼티를 설정해줬다고 해도 
+    스프링 환경설정에 사용할 properties bean을 다시 선언해 줘야한다.-->
    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<value>classpath*:config/*.properties</value>

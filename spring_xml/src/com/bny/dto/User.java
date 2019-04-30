@@ -8,7 +8,7 @@ public class User {
 	private String email;
 	private String password;
 	private String userName;
-	private String usedType;
+	private String joinedType;
 	private String phoneNumber;
 	private String profilePath;
 	private char emailYn;
@@ -44,11 +44,11 @@ public class User {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public String getUsedType() {
-		return usedType;
+	public String getJoinedType() {
+		return joinedType;
 	}
-	public void setUsedType(String usedType) {
-		this.usedType = usedType;
+	public void setJoinedType(String joinedType) {
+		this.joinedType = joinedType;
 	}
 	public String getPhoneNumber() {
 		return phoneNumber;
@@ -84,7 +84,7 @@ public class User {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return userKey + ":" + id + ":"+email+":"+password+":"+userName+":"+usedType+":";
+		return userKey + ":" + id + ":"+email+":"+password+":"+userName+":"+joinedType+":";
 	}
 	
 }

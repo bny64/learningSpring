@@ -11,7 +11,7 @@
 			<nav id="fh5co-menu-wrap" role="navigation">
 				<ul class="sf-menu" id="fh5co-primary-menu">
 					<c:choose>
-						<c:when test="${userInfo eq null}">
+						<c:when test="${userKey eq null}">
 							<li><a href="/spring_xml/auth/login"> Login</a></li>
 						</c:when>
 						<c:otherwise>

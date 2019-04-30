@@ -20,7 +20,7 @@
 	<script src="/spring_xml/js/common/jquery.magnific-popup.min.js"></script>
 	<script src="/spring_xml/js/common/magnific-popup-options.js"></script>
 	<!-- Date Picker -->
-	<script src="/spring_xml/js/bootstrap-datepicker.min.js"></script>
+	<script src="/spring_xml/js/common/bootstrap-datepicker.min.js"></script>
 	<!-- CS Select -->
 	<script src="/spring_xml/js/common/classie.js"></script>
 	<script src="/spring_xml/js/common/selectFx.js"></script>
