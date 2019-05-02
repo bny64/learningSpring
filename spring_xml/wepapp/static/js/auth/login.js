@@ -135,4 +135,8 @@
         });
     });
 
+    document.querySelector("#main").addEventListener('click',()=>{
+        location.href = "http://localhost:8080/spring_xml/index";
+    });
+    
 })();

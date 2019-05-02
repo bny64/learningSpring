@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public String selectUserByIdPass(Map<String, String> userInfo) throws Exception {		
+	public Map<String, String> selectUserByIdPass(Map<String, String> userInfo) throws Exception {		
 		return userDao.selectUserByIdPass(userInfo);
 	}
 

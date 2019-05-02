@@ -13,8 +13,8 @@
 		INSERT INTO users (userKey, id, email, password, userName, joinedType, phoneNumber, emailYn, birth, intMySelf)
 		VALUES (#{userKey}, #{id}, #{email}, #{password}, #{userName}, #{joinedType}, #{phoneNumber}, #{emailYn}, #{birth}, #{intMySelf})
 	</insert>
-	<select id="selectUserByIdPass" parameterType="map" resultType="String">
-		SELECT userKey FROM users WHERE id=#{id} AND password=#{password}
+	<select id="selectUserByIdPass" parameterType="map" resultType="map">
+		SELECT userKey, userName FROM users WHERE id=#{id} AND password=#{password}
 	</select>
 </mapper>
  

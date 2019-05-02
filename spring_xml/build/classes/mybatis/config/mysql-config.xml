@@ -15,8 +15,4 @@
         <setting name="jdbcTypeForNull" value="VARCHAR"/>
         <!-- <setting name="callSettersOnNulls" value="true" /> -->
     </settings>
-    
-    <typeAliases>
-    	<package name="com.bny.dto"/>
-    </typeAliases>
 </configuration>

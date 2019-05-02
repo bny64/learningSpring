@@ -35,15 +35,16 @@
 	 -->
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/index"/>	 <!-- <mvc:mapping path="/index"/> /** 변경해서 테스트(안됨) -->		
-			<mvc:exclude-mapping path="/spring_xml/auth/**"/>
-			<mvc:exclude-mapping path="/spring_xml/css/**"/>
-			<mvc:exclude-mapping path="/spring_xml/fonts/**"/>
-			<mvc:exclude-mapping path="/spring_xml/images/**"/>
-			<mvc:exclude-mapping path="/spring_xml/js/**"/>
-			<mvc:exclude-mapping path="/spring_xml/sass/**"/>
-			<mvc:exclude-mapping path="/spring_xml/publishing/**"/>
-			<mvc:exclude-mapping path="/spring_xml/vendor/**"/>			
+			<mvc:mapping path="/**"/>	 <!-- <mvc:mapping path="/index"/> /** 변경해서 테스트(안됨) -->
+			<mvc:exclude-mapping path="/index"/>		
+			<mvc:exclude-mapping path="/auth/**"/>
+			<mvc:exclude-mapping path="/css/**"/>
+			<mvc:exclude-mapping path="/fonts/**"/>
+			<mvc:exclude-mapping path="/images/**"/>
+			<mvc:exclude-mapping path="/js/**"/>
+			<mvc:exclude-mapping path="/sass/**"/>
+			<mvc:exclude-mapping path="/publishing/**"/>
+			<mvc:exclude-mapping path="/vendor/**"/>			
 			<bean class="com.bny.common.interceptor.AccessControlInterceptor"/>		
 		</mvc:interceptor>
 	</mvc:interceptors>

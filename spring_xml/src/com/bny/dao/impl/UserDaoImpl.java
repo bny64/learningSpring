@@ -38,7 +38,7 @@ public class UserDaoImpl extends CommonDao implements UserDao{
 	}
 
 	@Override
-	public String selectUserByIdPass(Map<String, String> userInfo) throws Exception {
+	public Map<String, String> selectUserByIdPass(Map<String, String> userInfo) throws Exception {
 		return sqlSessionTemplate.selectOne(getNameSpace()+".selectUserByIdPass", userInfo);
 	}
 
