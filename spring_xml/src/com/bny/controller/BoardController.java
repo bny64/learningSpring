@@ -20,4 +20,6 @@ public class BoardController {
 		return mnv;
 	}
 	
+	/*@RequestMapping(value="/getBoardList", method=RequestMethod.POST)*/
+	
 }
