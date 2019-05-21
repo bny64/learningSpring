@@ -27,6 +27,12 @@
 							<li><a href="#">Node JS</a></li>
 							<li><a href="#">Django &amp; Python</a></li>
 						</ul></li>
+					<li><a class="fh5co-sub-ddown" href="#">Board</a>
+					 	<ul class="fh5co-sub-menu">
+						    <li><a href="/spring_xml/board/boardList">Board List</a></li>
+						    <li><a href="spring_xml//board/registBoard">Regist Board</a></li>
+						</ul>
+					</li>
 					<li><a href="flight.html">Flights</a></li>
 					<li><a href="hotel.html">Hotel</a></li>
 					<li><a href="car.html">Car</a></li>
