@@ -60,6 +60,11 @@ Facebook: 		https://www.facebook.com/fh5co
 
 <!-- Modernizr JS -->
 <script src="/spring_xml/js/common/modernizr-2.6.2.min.js"></script>
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+<script src="/spring_xml/lib/highstock/highstock.js"></script>
+<script src="/spring_xml/js/common/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/spring_xml/lib/summernote/summernote-lite.css" />
+<script src="/spring_xml/lib/summernote/summernote-lite.js"></script>
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 <script src="/spring_xml/js/respond.min.js"></script>

@@ -26,6 +26,7 @@
 	<mvc:resources location="/static/sass/**" mapping="/sass/**"/>
 	<mvc:resources location="/static/publishing/**" mapping="/publishing/**"/>
 	<mvc:resources location="/static/vendor/**" mapping="/vendor/**"/>
+	<mvc:resources location="/static/lib/**" mapping="/lib/**"/>
 	
 	<mvc:default-servlet-handler/>
 	
@@ -44,7 +45,8 @@
 			<mvc:exclude-mapping path="/js/**"/>
 			<mvc:exclude-mapping path="/sass/**"/>
 			<mvc:exclude-mapping path="/publishing/**"/>
-			<mvc:exclude-mapping path="/vendor/**"/>			
+			<mvc:exclude-mapping path="/vendor/**"/>
+			<mvc:exclude-mapping path="/lib/**"/>			
 			<bean class="com.bny.common.interceptor.AccessControlInterceptor"/>		
 		</mvc:interceptor>
 	</mvc:interceptors>

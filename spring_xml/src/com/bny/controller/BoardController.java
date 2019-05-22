@@ -31,10 +31,18 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 	
+	//BOARDLIST 페이지	
 	@RequestMapping(value="/boardList", method=RequestMethod.GET)
 	public ModelAndView boardList(ModelAndView mnv) throws Exception{
-		logger.debug("BoardController : get - /boardList");
+		logger.debug("BoardController : GET - /boardList");
 		mnv.setViewName("board/boardList");
+		return mnv;
+	}
+	
+	@RequestMapping(value="/registBoard", method=RequestMethod.GET)
+	public ModelAndView registBoard(ModelAndView mnv) throws Exception{
+		logger.debug("BoardController : GET - /registBoard");
+		mnv.setViewName("board/registBoard");
 		return mnv;
 	}
 	

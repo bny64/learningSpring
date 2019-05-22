@@ -30,7 +30,7 @@
 					<li><a class="fh5co-sub-ddown" href="#">Board</a>
 					 	<ul class="fh5co-sub-menu">
 						    <li><a href="/spring_xml/board/boardList">Board List</a></li>
-						    <li><a href="spring_xml//board/registBoard">Regist Board</a></li>
+						    <li><a href="/spring_xml//board/registBoard">Regist Board</a></li>
 						</ul>
 					</li>
 					<li><a href="flight.html">Flights</a></li>
