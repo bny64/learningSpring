@@ -18,4 +18,4 @@
  		</div>
 	</div>
 </div>
-<!-- <script src="/spring_xml/js/board/boardList.js"></script> -->
+<script src="/spring_xml/js/board/boardList.js"></script>

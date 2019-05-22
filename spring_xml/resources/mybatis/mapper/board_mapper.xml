@@ -9,7 +9,7 @@
 			SELECT listNo, name, title, contents
 			FROM bny_sequelize.boards
 			ORDER BY listNo DESC
-		)
+		) A
 		LIMIT #{pageSize} OFFSET #{offset}
 	</select>	
 </mapper>
