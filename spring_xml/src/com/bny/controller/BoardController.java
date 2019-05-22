@@ -66,5 +66,11 @@ public class BoardController {
 		
 		boards = boardService.selectBoardList(map);
 		return boards;
-	}	
+	}
+	
+	@RequestMapping(value="/registBoard", method=RequestMethod.POST)
+	public String registBoard(@RequestBody Map<String, String> request, HttpServletResponse response) throws Exception {
+		
+		return "";
+	}
 }
