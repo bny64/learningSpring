@@ -5,11 +5,13 @@ import java.util.List;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
 
 import com.bny.dao.CommentDao;
 import com.bny.dao.CommonDao;
 import com.bny.dto.Comment;
 
+@Repository
 public class CommentDaoImpl extends CommonDao implements CommentDao{
 
 	private static Logger logger = LoggerFactory.getLogger(UserDaoImpl.class);

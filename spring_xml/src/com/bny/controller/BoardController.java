@@ -1,7 +1,6 @@
 package com.bny.controller;
 
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,12 +16,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.bny.dto.Board;
+import com.bny.dto.Comment;
 import com.bny.service.BoardService;
+import com.bny.service.CommentService;
 
 @Controller
 @RequestMapping(value="/board")
@@ -32,6 +34,8 @@ public class BoardController {
 	
 	@Autowired
 	private BoardService boardService;
+	@Autowired
+	private CommentService commentService;
 	
 	//BOARDLIST 페이지	
 	@RequestMapping(value="/boardList", method=RequestMethod.GET)
@@ -101,10 +105,13 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/viewBoard", method=RequestMethod.GET)
-	public ModelAndView viewBoard(ModelAndView mnv, @RequestBody Map<String, String> req) throws Exception{
+	public ModelAndView viewBoard(ModelAndView mnv, @RequestParam Map<String, String> req) throws Exception{		
+		logger.debug("BoardController : GET - /viewBoard");
+		int listNo = Integer.parseInt(req.get("listNo"));
 		
-		String pageNo = req.get("pageNo");
+		Board board = boardService.selectBoard(listNo);
 		
+		mnv.addObject("content", board);
 		mnv.setViewName("board/viewBoard");
 		return mnv;
 	}
