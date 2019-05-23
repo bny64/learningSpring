@@ -132,9 +132,16 @@ public class AuthController {
 			loginLog.setUserName(userInfo.get("userName"));
 			logService.insertLoginLog(loginLog);
 			
+			/**
+			 * DB에서 조회된 유저 정보에서 이름을 userName으로 입력
+			 * 로그인 할 때 입력한 ID정보를 userId로 입력
+			 * */
+			
 			message.addFlashAttribute("message", "로그인 되었습니다.");
+			logger.debug("@@@ {}", userInfo);
+			logger.debug("@@@ {}", request.getParameter("id"));
 			sessionObj.put("userName", userInfo.get("userName"));
-			sessionObj.put("userId", userInfo.get("id"));
+			sessionObj.put("userId", request.getParameter("id"));
 			request.getSession().setAttribute("userInfo", sessionObj);			
 		}
 		return "redirect:/index";
@@ -143,10 +150,10 @@ public class AuthController {
 	@RequestMapping(value="/logout", method=RequestMethod.GET)
 	public String logoutMember(HttpServletRequest request, 
 			HttpServletResponse response, RedirectAttributes message) throws Exception{
-		if(request.getSession().getAttribute("userKey")!=null) {
+		if(request.getSession().getAttribute("userInfo")!=null) {
 			
 			message.addFlashAttribute("message", "로그아웃 되었습니다.");
-			request.getSession().removeAttribute("userKey");
+			request.getSession().removeAttribute("userInfo");
 		}
 		
 		return "redirect:/index";

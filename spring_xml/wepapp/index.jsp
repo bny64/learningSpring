@@ -26,7 +26,6 @@
 							    	   <a href="#packages" aria-controls="packages" role="tab" data-toggle="tab">Packages</a>
 							      </li>
 							   </ul>
-
 							   <!-- Tab panes -->
 								<div class="tab-content">
 								 <div role="tabpanel" class="tab-pane active" id="flights">

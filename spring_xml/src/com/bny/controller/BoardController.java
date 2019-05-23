@@ -9,6 +9,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.bny.dto.Board;
 import com.bny.service.BoardService;
@@ -71,11 +73,32 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/registBoard", method=RequestMethod.POST)
-	public String registBoard(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public String registBoard(HttpServletRequest request, RedirectAttributes message) throws Exception {
 		/**
 		 * form 태그는 json 형태가 아니기 때문에 @RequestBody를 사용할 수 없고
 		 * HttpServletRequest로 받아야 함.
 		 * */
-		return "redirect:/board/getBoardList";
+		JSONObject userInfo = (JSONObject) request.getSession().getAttribute("userInfo");
+		Board board = new Board();
+		
+		String password = request.getParameter("password");		
+		board.setContents(request.getParameter("contents"));		
+		board.setTitle(request.getParameter("title"));
+		if(!("".equals(password) || password==null)) {
+			board.setPassword(password);
+			board.setPassYn("Y".charAt(0));
+		}else {
+			board.setPassYn("N".charAt(0));
+		}
+		
+		logger.debug("@@@ {}", userInfo);
+		
+		board.setName(userInfo.get("userName").toString());
+		board.setId(userInfo.get("userId").toString());
+		
+		boardService.registBoard(board);
+		
+		message.addFlashAttribute("message", "등록되었습니다");
+		return "redirect:/board/boardList";
 	}
 }
