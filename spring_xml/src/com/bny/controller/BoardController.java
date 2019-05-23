@@ -91,8 +91,6 @@ public class BoardController {
 			board.setPassYn("N".charAt(0));
 		}
 		
-		logger.debug("@@@ {}", userInfo);
-		
 		board.setName(userInfo.get("userName").toString());
 		board.setId(userInfo.get("userId").toString());
 		
@@ -100,5 +98,14 @@ public class BoardController {
 		
 		message.addFlashAttribute("message", "등록되었습니다");
 		return "redirect:/board/boardList";
+	}
+	
+	@RequestMapping(value="/viewBoard", method=RequestMethod.GET)
+	public ModelAndView viewBoard(ModelAndView mnv, @RequestBody Map<String, String> req) throws Exception{
+		
+		String pageNo = req.get("pageNo");
+		
+		mnv.setViewName("board/viewBoard");
+		return mnv;
 	}
 }

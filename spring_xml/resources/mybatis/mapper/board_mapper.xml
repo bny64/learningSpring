@@ -16,5 +16,15 @@
 		INSERT INTO boards (id, name, contents, password, passYn, title)
 		VALUES (#{id}, #{name}, #{contents}, #{password}, #{passYn}, #{title})
 	</insert>
+	<select id="selectBoard" parameterType="int" resultType="com.bny.dto.Board">
+		SELECT listNo, id, name, title, contents
+		FROM boards
+		WHERE listNo=#{listNo}
+	</select>
+	<select id="selectCommentList" parameterType="int" resultType="com.bny.dto.Comment">
+		SELECT id, name, contents
+		FROM comments
+		WHERE parListNo=#{listNo}
+	</select>
 </mapper>
  
