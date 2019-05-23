@@ -7,4 +7,5 @@ import com.bny.dto.Board;
 
 public interface BoardService {
 	public List<Board> selectBoardList(Map<String, Integer> paging) throws Exception;
+	public int registBoard(Board board) throws Exception;
 }

@@ -21,4 +21,9 @@ public class BoardServiceImpl implements BoardService{
 		return boardDao.selectBoardList(paging);
 	}
 
+	@Override
+	public int registBoard(Board board) throws Exception {		
+		return boardDao.registBoard(board);
+	}
+
 }

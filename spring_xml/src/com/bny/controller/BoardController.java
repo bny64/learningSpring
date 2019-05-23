@@ -48,6 +48,8 @@ public class BoardController {
 	
 	@RequestMapping(value="/getBoardList", method=RequestMethod.POST)
 	public @ResponseBody List<Board> getBoardList(@RequestBody Map<String, String> request, HttpServletResponse response) throws Exception {
+		logger.debug("BoardController : POST - /getBoardList");
+		
 		/**
 		 * !중요
 		 * @RequsetBody, @ResponseBody를 사용하려면 jackson library를 넣어야 됨.
@@ -69,8 +71,11 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/registBoard", method=RequestMethod.POST)
-	public String registBoard(@RequestBody Map<String, String> request, HttpServletResponse response) throws Exception {
-		
-		return "";
+	public String registBoard(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		/**
+		 * form 태그는 json 형태가 아니기 때문에 @RequestBody를 사용할 수 없고
+		 * HttpServletRequest로 받아야 함.
+		 * */
+		return "redirect:/board/getBoardList";
 	}
 }

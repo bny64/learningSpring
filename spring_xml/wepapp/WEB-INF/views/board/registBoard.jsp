@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="fh5co-section-gray" id="fh5co-tours">
     <div class="container">
-        <form class="contentForm" method="POST" action="/board/registBoard">
+        <form class="contentForm" method="POST" action="/spring_xml/board/registBoard">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                     <h3>제목</h3>

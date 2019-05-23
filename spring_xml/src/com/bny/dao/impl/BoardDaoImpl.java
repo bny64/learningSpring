@@ -26,4 +26,9 @@ public class BoardDaoImpl extends CommonDao implements BoardDao{
 	public List<Board> selectBoardList(Map<String, Integer> paging) throws Exception {
 		return sqlSessionTemplate.selectList(getNameSpace()+".selectBoardList", paging);
 	}
+
+	@Override
+	public int registBoard(Board board) throws Exception {
+		return sqlSessionTemplate.insert(getNameSpace()+".registBoard", board);		
+	}
 }

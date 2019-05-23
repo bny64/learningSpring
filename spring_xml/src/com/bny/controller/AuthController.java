@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,8 +80,7 @@ public class AuthController {
 		}
 		
 		
-		result = userService.selectUserByEmail(user.getEmail()) == 0 ? false : true;
-		
+		result = userService.selectUserByEmail(user.getEmail()) == 0 ? false : true;		
 		if(result) {
 			response.setContentType("text/html");
 			response.setCharacterEncoding("UTF-8");
@@ -107,6 +107,7 @@ public class AuthController {
 		logger.debug("AuthController : post - /login");
 		Map<String, String> userInfo = new HashMap<String, String>();
 		security = new Security();		
+		JSONObject sessionObj = new JSONObject();
 		
 		Map<String, String> user = new HashMap<String, String>();
 		user.put("id", request.getParameter("id"));
@@ -132,7 +133,9 @@ public class AuthController {
 			logService.insertLoginLog(loginLog);
 			
 			message.addFlashAttribute("message", "로그인 되었습니다.");
-			request.getSession().setAttribute("userKey", userInfo.get("userKey"));			
+			sessionObj.put("userName", userInfo.get("userName"));
+			sessionObj.put("userId", userInfo.get("id"));
+			request.getSession().setAttribute("userInfo", sessionObj);			
 		}
 		return "redirect:/index";
 	}

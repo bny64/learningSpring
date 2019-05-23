@@ -16,7 +16,7 @@ public class AccessControlInterceptor extends HandlerInterceptorAdapter{
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
-		Object userInfo = session.getAttribute("userKey");
+		Object userInfo = session.getAttribute("userInfo");
 		if(null==userInfo) {
 			logger.debug("세션정보 없음. 로그인 페이지로 이동");
 			response.sendRedirect("/spring_xml/auth/login");
