@@ -115,4 +115,32 @@ public class BoardController {
 		mnv.setViewName("board/viewBoard");
 		return mnv;
 	}
+	
+	@RequestMapping(value="/getCommentList", method=RequestMethod.POST)
+	public @ResponseBody JSONObject getCommentList(@RequestBody Map<String, String> request) throws Exception {
+		logger.debug("BoardController : POST - /getCommentList");
+		
+		
+		JSONObject returnObj = new JSONObject();
+		Map<String, Integer> paging = new HashMap<String, Integer>();
+		List<Comment> commentList = new ArrayList<Comment>();
+		
+		String pageNo = request.get("pageNo");
+		String pageSize = request.get("pageSize");		
+		int offset = (Integer.parseInt(pageNo)-1) * Integer.parseInt(pageSize);
+		int boardNo = Integer.parseInt(request.get("boardNo"));
+		
+		paging.put("pageSize", Integer.parseInt(pageSize));
+		paging.put("offset", offset);
+		paging.put("listNo", boardNo);
+		
+		
+		int count = commentService.selectCommentCount(boardNo);
+		commentList = commentService.selectCommentList(paging);
+		
+		returnObj.put("count", count);
+		returnObj.put("contents", commentList);		
+		
+		return returnObj;
+	}
 }

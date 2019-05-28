@@ -1,6 +1,7 @@
 package com.bny.dao.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.slf4j.Logger;
@@ -27,8 +28,13 @@ public class CommentDaoImpl extends CommonDao implements CommentDao{
 	}
 	
 	@Override
-	public List<Comment> selectCommentList(int listNo) throws Exception {
-		return sqlSessionTemplate.selectList(getNameSpace()+".selectCommentList", listNo);
+	public List<Comment> selectCommentList(Map<String, Integer> paging) throws Exception {
+		return sqlSessionTemplate.selectList(getNameSpace()+".selectCommentList", paging);
+	}
+
+	@Override
+	public int selectCommentCount(int listNo) throws Exception {		
+		return sqlSessionTemplate.selectOne(getNameSpace()+".selectCommentCount", listNo);
 	}
 
 }

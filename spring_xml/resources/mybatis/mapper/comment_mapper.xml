@@ -3,8 +3,18 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bny.dao.CommentDao">	
-	<select id="selectCommentList" parameterType="int" resultType="com.bny.dto.Comment">
+	<select id="selectCommentList" parameterType="map" resultType="com.bny.dto.Comment">
 		SELECT id, name, contents
+		FROM(
+			SELECT id, name, contents
+			FROM comments
+			WHERE parListNo=#{listNo}
+			ORDER BY listNo DESC
+		) A
+		LIMIT #{pageSize} OFFSET #{offset}		
+	</select>
+	<select id="selectCommentCount" parameterType="int" resultType="int">
+		SELECT COUNT(listNo)
 		FROM comments
 		WHERE parListNo=#{listNo}
 	</select>

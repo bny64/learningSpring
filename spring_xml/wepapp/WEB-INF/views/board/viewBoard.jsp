@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<input id="listNoVal" style="display:none;" value="${contents.listNo }"/>
+<input id="listNoVal" style="display:none;" value="${content.listNo }"/>
 <div class="fh5co-section-gray" id="fh5co-tours">
     <div class="container">
         <form class="contentForm" method="POST" action="/board/registBoard">
@@ -33,4 +33,4 @@
     <p><a class="btn btn-primary" id="addComment" href="javascript:void(0);">댓글 달기</a></p>
     <p><a class="btn btn-primary" id="cancelComment" href="javascript:void(0);">취소</a></p>
 </div>
-<script src="/js/board/viewBoard.js"></script>
+<script src="/spring_xml/js/board/viewBoard.js"></script>
