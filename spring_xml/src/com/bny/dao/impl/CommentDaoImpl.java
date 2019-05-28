@@ -37,4 +37,9 @@ public class CommentDaoImpl extends CommonDao implements CommentDao{
 		return sqlSessionTemplate.selectOne(getNameSpace()+".selectCommentCount", listNo);
 	}
 
+	@Override
+	public int addComment(Comment comment) throws Exception {
+		return sqlSessionTemplate.insert(getNameSpace()+".addComment", comment);
+	}
+
 }

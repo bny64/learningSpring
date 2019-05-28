@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.simple.JSONObject;
 import org.slf4j.Logger;
@@ -141,6 +142,32 @@ public class BoardController {
 		returnObj.put("count", count);
 		returnObj.put("contents", commentList);		
 		
+		return returnObj;
+	}
+	
+	@RequestMapping(value="/addComment", method=RequestMethod.POST)
+	public @ResponseBody JSONObject addComment(@RequestBody Map<String, String> request, HttpSession session) throws Exception {
+		
+		JSONObject returnObj = new JSONObject();
+		Comment comment = new Comment();
+		
+		String boardNo = request.get("boardNo");
+		String contents = request.get("contents");
+		char secretYn = "N".charAt(0); 
+		
+		JSONObject userInfo = (JSONObject) session.getAttribute("userInfo");
+		String id = userInfo.get("userId").toString();
+		String name = userInfo.get("userName").toString();
+		
+		comment.setParListNo(Integer.parseInt(boardNo));
+		comment.setContents(contents);
+		comment.setSecretYn(secretYn);
+		comment.setId(id);
+		comment.setName(name);
+		
+		boolean result = commentService.addComment(comment) == 1 ? true : false;
+		
+		returnObj.put("result", result);		
 		return returnObj;
 	}
 }

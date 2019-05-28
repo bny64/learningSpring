@@ -6,7 +6,7 @@ public class Comment {
 	private String id;
 	private String name;
 	private String contents;
-	private char searchYn;
+	private char secretYn;
 	private int parListNo;
 	public int getListNo() {
 		return listNo;
@@ -32,11 +32,11 @@ public class Comment {
 	public void setContents(String contents) {
 		this.contents = contents;
 	}
-	public char getSearchYn() {
-		return searchYn;
+	public char getsecretYnYn() {
+		return secretYn;
 	}
-	public void setSearchYn(char searchYn) {
-		this.searchYn = searchYn;
+	public void setSecretYn(char secretYn) {
+		this.secretYn = secretYn;
 	}
 	public int getParListNo() {
 		return parListNo;

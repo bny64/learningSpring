@@ -38,7 +38,7 @@
             document.querySelector('#commentContents').value = '';            
             getCommentList(1);
         }
-        xhr.open('POST', '/board/addComment');
+        xhr.open('POST', '/spring_xml/board/addComment');
         xhr.setRequestHeader('Content-type', 'application/json');
         xhr.send(JSON.stringify(sendData));
     }

@@ -21140,3 +21140,259 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'comments' in 'field
 ¢º DEBUG 17:25:51.240 [tomcat-http--70] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
 ¢º INFO  17:26:33.424 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.support.XmlWebApplicationContext[doClose:873] - Closing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Tue May 28 17:23:58 KST 2019]; parent: Root WebApplicationContext
 ¢º INFO  17:26:33.425 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.tiles.access.TilesAccess[setContainer:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+¢º INFO  17:26:36.395 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.ContextLoader[initWebApplicationContext:272] - Root WebApplicationContext: initialization started
+¢º INFO  17:26:36.593 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing Root WebApplicationContext: startup date [Tue May 28 17:26:36 KST 2019]; root of context hierarchy
+¢º INFO  17:26:36.715 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\database-context.xml]
+¢º INFO  17:26:36.777 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\mvc-context.xml]
+¢º INFO  17:26:37.093 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\view-context.xml]
+¢º INFO  17:26:37.550 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\common.properties]
+¢º INFO  17:26:37.552 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\jdbc.properties]
+¢º INFO  17:26:38.362 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinView(org.springframework.web.portlet.ModelAndView) throws java.lang.Exception
+¢º INFO  17:26:38.362 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinMember(org.springframework.web.portlet.ModelAndView) throws java.lang.Exception
+¢º INFO  17:26:38.363 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.joinMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  17:26:38.363 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.loginMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  17:26:38.363 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/logout],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.logoutMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  17:26:38.364 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/boardList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.boardList(org.springframework.web.servlet.ModelAndView) throws java.lang.Exception
+¢º INFO  17:26:38.365 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/registBoard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.registBoard(org.springframework.web.servlet.ModelAndView) throws java.lang.Exception
+¢º INFO  17:26:38.365 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/registBoard],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.BoardController.registBoard(javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  17:26:38.365 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/getBoardList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<com.bny.dto.Board> com.bny.controller.BoardController.getBoardList(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+¢º INFO  17:26:38.366 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/viewBoard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.viewBoard(org.springframework.web.servlet.ModelAndView,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+¢º INFO  17:26:38.366 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/getCommentList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.json.simple.JSONObject com.bny.controller.BoardController.getCommentList(java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+¢º INFO  17:26:38.366 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.IndexController.TestController(org.springframework.web.servlet.ModelAndView,javax.servlet.http.HttpServletRequest)
+¢º INFO  17:26:39.066 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver[initExceptionHandlerAdviceCache:313] - Detected @ExceptionHandler methods in commonExceptionAdvice
+¢º INFO  17:26:39.156 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+¢º INFO  17:26:39.158 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+¢º INFO  17:26:39.161 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+¢º INFO  17:26:39.165 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#3'
+¢º INFO  17:26:39.169 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/sass/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#4'
+¢º INFO  17:26:39.174 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/publishing/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#5'
+¢º INFO  17:26:39.179 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/vendor/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#6'
+¢º INFO  17:26:39.185 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/lib/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#7'
+¢º INFO  17:26:39.195 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+¢º INFO  17:26:39.280 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.ContextLoader[initWebApplicationContext:312] - Root WebApplicationContext: initialization completed in 2878 ms
+¢º INFO  17:26:39.336 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.DispatcherServlet[initServletBean:461] - FrameworkServlet 'dispatcherServlet': initialization started
+¢º INFO  17:26:39.340 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Tue May 28 17:26:39 KST 2019]; parent: Root WebApplicationContext
+¢º INFO  17:26:39.343 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from URL [file:/D:/spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32/sts-bundle/pivotal-tc-server/instances/base-instance/wtpwebapps/spring_xml/WEB-INF/classes/spring/root/root-context.xml]
+¢º INFO  17:26:39.360 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\common.properties]
+¢º INFO  17:26:39.360 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\jdbc.properties]
+¢º INFO  17:26:39.496 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.view.tiles3.TilesConfigurer[createEvaluator:399] - Found JSP 2.1 ExpressionFactory
+¢º INFO  17:26:39.527 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.tiles.access.TilesAccess[setContainer:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+¢º INFO  17:26:39.537 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.DispatcherServlet[initServletBean:480] - FrameworkServlet 'dispatcherServlet': initialization completed in 200 ms
+¢º DEBUG 17:26:42.684 [tomcat-http--89] com.bny.controller.BoardController[viewBoard:109] - BoardController : GET - /viewBoard
+¢º DEBUG 17:26:43.281 [tomcat-http--89] com.bny.dao.BoardDao.selectBoard[debug:143] - ==>  Preparing: SELECT listNo, id, name, title, contents FROM boards WHERE listNo=? 
+¢º DEBUG 17:26:43.316 [tomcat-http--89] com.bny.dao.BoardDao.selectBoard[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:26:43.367 [tomcat-http--89] com.bny.dao.BoardDao.selectBoard[debug:143] - <==      Total: 1
+¢º DEBUG 17:26:44.619 [tomcat-http--73] com.bny.controller.BoardController[getCommentList:121] - BoardController : POST - /getCommentList
+¢º DEBUG 17:26:44.645 [tomcat-http--73] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:26:44.646 [tomcat-http--73] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:26:44.669 [tomcat-http--73] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:26:44.675 [tomcat-http--73] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:26:44.676 [tomcat-http--73] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 0(Integer)
+¢º DEBUG 17:26:44.682 [tomcat-http--73] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
+¢º DEBUG 17:26:48.000 [tomcat-http--57] com.bny.controller.BoardController[getCommentList:121] - BoardController : POST - /getCommentList
+¢º DEBUG 17:26:48.005 [tomcat-http--57] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:26:48.006 [tomcat-http--57] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:26:48.011 [tomcat-http--57] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:26:48.015 [tomcat-http--57] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:26:48.016 [tomcat-http--57] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 3(Integer)
+¢º DEBUG 17:26:48.021 [tomcat-http--57] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 1
+¢º DEBUG 17:26:50.066 [tomcat-http--17] com.bny.controller.BoardController[getCommentList:121] - BoardController : POST - /getCommentList
+¢º DEBUG 17:26:50.071 [tomcat-http--17] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:26:50.072 [tomcat-http--17] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:26:50.078 [tomcat-http--17] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:26:50.082 [tomcat-http--17] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:26:50.082 [tomcat-http--17] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 0(Integer)
+¢º DEBUG 17:26:50.089 [tomcat-http--17] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
+¢º DEBUG 17:30:06.464 [tomcat-http--94] com.bny.controller.BoardController[getCommentList:121] - BoardController : POST - /getCommentList
+¢º DEBUG 17:30:06.477 [tomcat-http--94] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:30:06.477 [tomcat-http--94] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:30:06.488 [tomcat-http--94] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:30:06.506 [tomcat-http--94] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:30:06.506 [tomcat-http--94] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 0(Integer)
+¢º DEBUG 17:30:06.521 [tomcat-http--94] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
+¢º DEBUG 17:30:34.552 [tomcat-http--96] com.bny.controller.BoardController[viewBoard:109] - BoardController : GET - /viewBoard
+¢º DEBUG 17:30:34.556 [tomcat-http--96] com.bny.dao.BoardDao.selectBoard[debug:143] - ==>  Preparing: SELECT listNo, id, name, title, contents FROM boards WHERE listNo=? 
+¢º DEBUG 17:30:34.557 [tomcat-http--96] com.bny.dao.BoardDao.selectBoard[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:30:34.564 [tomcat-http--96] com.bny.dao.BoardDao.selectBoard[debug:143] - <==      Total: 1
+¢º DEBUG 17:30:35.192 [tomcat-http--102] com.bny.controller.BoardController[getCommentList:121] - BoardController : POST - /getCommentList
+¢º DEBUG 17:30:35.207 [tomcat-http--102] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:30:35.209 [tomcat-http--102] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:30:35.221 [tomcat-http--102] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:30:35.228 [tomcat-http--102] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:30:35.229 [tomcat-http--102] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 0(Integer)
+¢º DEBUG 17:30:35.259 [tomcat-http--102] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
+¢º DEBUG 17:30:36.881 [tomcat-http--104] com.bny.controller.BoardController[getCommentList:121] - BoardController : POST - /getCommentList
+¢º DEBUG 17:30:36.887 [tomcat-http--104] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:30:36.887 [tomcat-http--104] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:30:36.893 [tomcat-http--104] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:30:36.898 [tomcat-http--104] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:30:36.899 [tomcat-http--104] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 3(Integer)
+¢º DEBUG 17:30:36.906 [tomcat-http--104] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 1
+¢º DEBUG 17:30:39.722 [tomcat-http--75] com.bny.controller.BoardController[viewBoard:109] - BoardController : GET - /viewBoard
+¢º DEBUG 17:30:39.726 [tomcat-http--75] com.bny.dao.BoardDao.selectBoard[debug:143] - ==>  Preparing: SELECT listNo, id, name, title, contents FROM boards WHERE listNo=? 
+¢º DEBUG 17:30:39.726 [tomcat-http--75] com.bny.dao.BoardDao.selectBoard[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:30:39.733 [tomcat-http--75] com.bny.dao.BoardDao.selectBoard[debug:143] - <==      Total: 1
+¢º DEBUG 17:30:40.887 [tomcat-http--95] com.bny.controller.BoardController[getCommentList:121] - BoardController : POST - /getCommentList
+¢º DEBUG 17:30:40.931 [tomcat-http--95] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:30:40.933 [tomcat-http--95] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:30:40.939 [tomcat-http--95] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:30:40.948 [tomcat-http--95] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:30:40.950 [tomcat-http--95] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 0(Integer)
+¢º DEBUG 17:30:40.960 [tomcat-http--95] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
+¢º DEBUG 17:30:43.497 [tomcat-http--101] com.bny.controller.BoardController[getCommentList:121] - BoardController : POST - /getCommentList
+¢º DEBUG 17:30:43.501 [tomcat-http--101] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:30:43.502 [tomcat-http--101] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:30:43.507 [tomcat-http--101] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:30:43.512 [tomcat-http--101] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:30:43.512 [tomcat-http--101] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 3(Integer)
+¢º DEBUG 17:30:43.518 [tomcat-http--101] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 1
+¢º DEBUG 17:30:44.807 [tomcat-http--100] com.bny.controller.BoardController[getCommentList:121] - BoardController : POST - /getCommentList
+¢º DEBUG 17:30:44.812 [tomcat-http--100] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:30:44.813 [tomcat-http--100] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:30:44.817 [tomcat-http--100] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:30:44.823 [tomcat-http--100] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:30:44.824 [tomcat-http--100] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 0(Integer)
+¢º DEBUG 17:30:44.830 [tomcat-http--100] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
+¢º INFO  17:33:23.949 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.support.XmlWebApplicationContext[doClose:873] - Closing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Tue May 28 17:26:39 KST 2019]; parent: Root WebApplicationContext
+¢º INFO  17:33:23.949 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.tiles.access.TilesAccess[setContainer:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+¢º INFO  17:33:26.916 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.ContextLoader[initWebApplicationContext:272] - Root WebApplicationContext: initialization started
+¢º INFO  17:45:32.893 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:272] - Root WebApplicationContext: initialization started
+¢º INFO  17:45:33.134 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing Root WebApplicationContext: startup date [Tue May 28 17:45:33 KST 2019]; root of context hierarchy
+¢º INFO  17:45:33.284 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\database-context.xml]
+¢º INFO  17:45:33.399 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\mvc-context.xml]
+¢º INFO  17:45:33.784 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\view-context.xml]
+¢º INFO  17:45:34.278 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\common.properties]
+¢º INFO  17:45:34.280 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\jdbc.properties]
+¢º INFO  17:45:35.406 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinView(org.springframework.web.portlet.ModelAndView) throws java.lang.Exception
+¢º INFO  17:45:35.407 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinMember(org.springframework.web.portlet.ModelAndView) throws java.lang.Exception
+¢º INFO  17:45:35.407 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.joinMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  17:45:35.408 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.loginMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  17:45:35.408 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/logout],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.logoutMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  17:45:35.409 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/boardList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.boardList(org.springframework.web.servlet.ModelAndView) throws java.lang.Exception
+¢º INFO  17:45:35.410 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/registBoard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.registBoard(org.springframework.web.servlet.ModelAndView) throws java.lang.Exception
+¢º INFO  17:45:35.410 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/registBoard],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.BoardController.registBoard(javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  17:45:35.410 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/getBoardList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<com.bny.dto.Board> com.bny.controller.BoardController.getBoardList(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+¢º INFO  17:45:35.411 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/viewBoard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.viewBoard(org.springframework.web.servlet.ModelAndView,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+¢º INFO  17:45:35.411 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/getCommentList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.json.simple.JSONObject com.bny.controller.BoardController.getCommentList(java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+¢º INFO  17:45:35.412 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/addComment],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.json.simple.JSONObject com.bny.controller.BoardController.addComment(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpSession) throws java.lang.Exception
+¢º INFO  17:45:35.412 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.IndexController.TestController(org.springframework.web.servlet.ModelAndView,javax.servlet.http.HttpServletRequest)
+¢º INFO  17:45:36.271 [main] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver[initExceptionHandlerAdviceCache:313] - Detected @ExceptionHandler methods in commonExceptionAdvice
+¢º INFO  17:45:36.399 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+¢º INFO  17:45:36.401 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+¢º INFO  17:45:36.405 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+¢º INFO  17:45:36.408 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#3'
+¢º INFO  17:45:36.413 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/sass/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#4'
+¢º INFO  17:45:36.418 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/publishing/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#5'
+¢º INFO  17:45:36.431 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/vendor/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#6'
+¢º INFO  17:45:36.438 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/lib/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#7'
+¢º INFO  17:45:36.451 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+¢º INFO  17:45:36.571 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:312] - Root WebApplicationContext: initialization completed in 3668 ms
+¢º INFO  17:45:36.653 [main] org.springframework.web.servlet.DispatcherServlet[initServletBean:461] - FrameworkServlet 'dispatcherServlet': initialization started
+¢º INFO  17:45:36.658 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Tue May 28 17:45:36 KST 2019]; parent: Root WebApplicationContext
+¢º INFO  17:45:36.661 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from URL [file:/D:/spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32/sts-bundle/pivotal-tc-server/instances/base-instance/wtpwebapps/spring_xml/WEB-INF/classes/spring/root/root-context.xml]
+¢º INFO  17:45:36.685 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\common.properties]
+¢º INFO  17:45:36.685 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\jdbc.properties]
+¢º INFO  17:45:36.878 [main] org.springframework.web.servlet.view.tiles3.TilesConfigurer[createEvaluator:399] - Found JSP 2.1 ExpressionFactory
+¢º INFO  17:45:36.922 [main] org.apache.tiles.access.TilesAccess[setContainer:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+¢º INFO  17:45:36.941 [main] org.springframework.web.servlet.DispatcherServlet[initServletBean:480] - FrameworkServlet 'dispatcherServlet': initialization completed in 288 ms
+¢º DEBUG 17:45:51.454 [tomcat-http--2] com.bny.controller.BoardController[viewBoard:110] - BoardController : GET - /viewBoard
+¢º DEBUG 17:45:52.099 [tomcat-http--2] com.bny.dao.BoardDao.selectBoard[debug:143] - ==>  Preparing: SELECT listNo, id, name, title, contents FROM boards WHERE listNo=? 
+¢º DEBUG 17:45:52.162 [tomcat-http--2] com.bny.dao.BoardDao.selectBoard[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:45:52.230 [tomcat-http--2] com.bny.dao.BoardDao.selectBoard[debug:143] - <==      Total: 1
+¢º DEBUG 17:45:53.082 [tomcat-http--7] com.bny.controller.BoardController[getCommentList:122] - BoardController : POST - /getCommentList
+¢º DEBUG 17:45:53.088 [tomcat-http--7] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:45:53.089 [tomcat-http--7] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:45:53.094 [tomcat-http--7] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:45:53.099 [tomcat-http--7] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:45:53.100 [tomcat-http--7] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 0(Integer)
+¢º DEBUG 17:45:53.108 [tomcat-http--7] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
+¢º DEBUG 17:45:58.888 [tomcat-http--17] com.bny.controller.BoardController[viewBoard:110] - BoardController : GET - /viewBoard
+¢º DEBUG 17:45:58.893 [tomcat-http--17] com.bny.dao.BoardDao.selectBoard[debug:143] - ==>  Preparing: SELECT listNo, id, name, title, contents FROM boards WHERE listNo=? 
+¢º DEBUG 17:45:58.893 [tomcat-http--17] com.bny.dao.BoardDao.selectBoard[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:45:58.901 [tomcat-http--17] com.bny.dao.BoardDao.selectBoard[debug:143] - <==      Total: 1
+¢º DEBUG 17:46:00.176 [tomcat-http--45] com.bny.controller.BoardController[getCommentList:122] - BoardController : POST - /getCommentList
+¢º DEBUG 17:46:00.215 [tomcat-http--45] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:46:00.216 [tomcat-http--45] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:46:00.304 [tomcat-http--45] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:46:00.347 [tomcat-http--45] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:46:00.348 [tomcat-http--45] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 0(Integer)
+¢º DEBUG 17:46:00.378 [tomcat-http--45] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
+¢º DEBUG 17:46:36.054 [tomcat-http--9] com.bny.controller.BoardController[viewBoard:110] - BoardController : GET - /viewBoard
+¢º DEBUG 17:46:36.060 [tomcat-http--9] com.bny.dao.BoardDao.selectBoard[debug:143] - ==>  Preparing: SELECT listNo, id, name, title, contents FROM boards WHERE listNo=? 
+¢º DEBUG 17:46:36.061 [tomcat-http--9] com.bny.dao.BoardDao.selectBoard[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:46:36.068 [tomcat-http--9] com.bny.dao.BoardDao.selectBoard[debug:143] - <==      Total: 1
+¢º DEBUG 17:46:37.523 [tomcat-http--12] com.bny.controller.BoardController[getCommentList:122] - BoardController : POST - /getCommentList
+¢º DEBUG 17:46:37.540 [tomcat-http--12] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:46:37.541 [tomcat-http--12] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:46:37.555 [tomcat-http--12] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:46:37.564 [tomcat-http--12] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:46:37.565 [tomcat-http--12] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 0(Integer)
+¢º DEBUG 17:46:37.577 [tomcat-http--12] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
+¢º INFO  17:47:13.252 [tomcat-http--23] com.bny.exception.CommonExceptionAdvice[commonException:18] - bny exception : {}
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.bny.controller.BoardController.addComment(BoardController.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:214)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:748)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:945)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:876)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:931)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:833)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:807)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:491)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:668)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:764)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1388)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+¢º DEBUG 17:47:13.262 [tomcat-http--18] com.bny.controller.BoardController[getCommentList:122] - BoardController : POST - /getCommentList
+¢º DEBUG 17:47:13.266 [tomcat-http--18] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:47:13.267 [tomcat-http--18] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:47:13.272 [tomcat-http--18] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:47:13.276 [tomcat-http--18] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:47:13.277 [tomcat-http--18] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 0(Integer)
+¢º DEBUG 17:47:13.283 [tomcat-http--18] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
+¢º DEBUG 17:49:14.701 [tomcat-http--22] com.bny.controller.BoardController[viewBoard:110] - BoardController : GET - /viewBoard
+¢º DEBUG 17:49:14.706 [tomcat-http--22] com.bny.dao.BoardDao.selectBoard[debug:143] - ==>  Preparing: SELECT listNo, id, name, title, contents FROM boards WHERE listNo=? 
+¢º DEBUG 17:49:14.707 [tomcat-http--22] com.bny.dao.BoardDao.selectBoard[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:49:14.715 [tomcat-http--22] com.bny.dao.BoardDao.selectBoard[debug:143] - <==      Total: 1
+¢º DEBUG 17:49:19.361 [tomcat-http--38] com.bny.controller.BoardController[getCommentList:122] - BoardController : POST - /getCommentList
+¢º DEBUG 17:49:19.368 [tomcat-http--38] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==>  Preparing: SELECT COUNT(listNo) FROM comments WHERE parListNo=? 
+¢º DEBUG 17:49:19.369 [tomcat-http--38] com.bny.dao.CommentDao.selectCommentCount[debug:143] - ==> Parameters: 15(Integer)
+¢º DEBUG 17:49:19.374 [tomcat-http--38] com.bny.dao.CommentDao.selectCommentCount[debug:143] - <==      Total: 1
+¢º DEBUG 17:49:19.398 [tomcat-http--38] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==>  Preparing: SELECT id, name, contents FROM( SELECT id, name, contents FROM comments WHERE parListNo=? ORDER BY listNo DESC ) A LIMIT ? OFFSET ? 
+¢º DEBUG 17:49:19.399 [tomcat-http--38] com.bny.dao.CommentDao.selectCommentList[debug:143] - ==> Parameters: 15(Integer), 3(Integer), 0(Integer)
+¢º DEBUG 17:49:19.408 [tomcat-http--38] com.bny.dao.CommentDao.selectCommentList[debug:143] - <==      Total: 3
+¢º INFO  17:50:11.507 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.support.XmlWebApplicationContext[doClose:873] - Closing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Tue May 28 17:45:36 KST 2019]; parent: Root WebApplicationContext
+¢º INFO  17:50:11.508 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.tiles.access.TilesAccess[setContainer:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext

@@ -27,7 +27,7 @@
 </div>
 <div id="popup" style="display:none;">
     <h3>작성자</h3>
-    <input class="form-control" type="text" value="${user.name }" disabled="disabled" />
+    <input class="form-control" type="text" value="${userInfo.userName }" disabled="disabled" />
     <h3>내용</h3>
     <textarea class="form-control" id="commentContents" style="height:40%;"></textarea>
     <p><a class="btn btn-primary" id="addComment" href="javascript:void(0);">댓글 달기</a></p>

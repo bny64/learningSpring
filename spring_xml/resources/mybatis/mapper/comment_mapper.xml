@@ -18,5 +18,9 @@
 		FROM comments
 		WHERE parListNo=#{listNo}
 	</select>
+	<insert id="addComment" parameterType="com.bny.dto.Comment">
+		INSERT INTO comments (id, name, contents, secretYn, parListNo)
+		VALUES (#{id}, #{name}, #{contents}, #{secretYn}, #{parListNo})
+	</insert>
 </mapper>
  

@@ -26,4 +26,9 @@ public class CommentServiceImpl implements CommentService{
 		return commentDao.selectCommentCount(listNo);		
 	}
 
+	@Override
+	public int addComment(Comment comment) throws Exception {
+		return commentDao.addComment(comment);
+	}
+
 }

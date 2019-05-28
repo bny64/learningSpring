@@ -8,4 +8,5 @@ import com.bny.dto.Comment;
 public interface CommentDao {
 	public List<Comment> selectCommentList(Map<String, Integer> paging) throws Exception;
 	public int selectCommentCount(int listNo) throws Exception;
+	public int addComment(Comment comment) throws Exception;
 }
