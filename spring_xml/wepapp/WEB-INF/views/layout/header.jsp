@@ -19,14 +19,14 @@
 						</c:otherwise>
 					</c:choose>
 					<li><a href="index.html">Home</a></li>
-					<li><a href="vacation.html" class="fh5co-sub-ddown">Vacations</a>
+					<!-- <li><a href="vacation.html" class="fh5co-sub-ddown">Vacations</a>
 						<ul class="fh5co-sub-menu">
 							<li><a href="#">Family</a></li>
 							<li><a href="#">CSS3 &amp; HTML5</a></li>
 							<li><a href="#">Angular JS</a></li>
 							<li><a href="#">Node JS</a></li>
 							<li><a href="#">Django &amp; Python</a></li>
-						</ul></li>
+						</ul></li> -->
 					<li><a class="fh5co-sub-ddown" href="#">Board</a>
 					 	<ul class="fh5co-sub-menu">
 						    <li><a href="/spring_xml/board/boardList">Board List</a></li>
