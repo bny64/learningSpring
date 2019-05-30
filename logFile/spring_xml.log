@@ -21548,3 +21548,665 @@ java.lang.NumberFormatException: null
 ¢º DEBUG 17:59:33.971 [tomcat-http--37] com.bny.dao.BoardDao.selectBoardList[debug:143] - <==      Total: 9
 ¢º INFO  18:05:40.056 [RMI TCP Connection(7)-127.0.0.1] org.springframework.web.context.support.XmlWebApplicationContext[doClose:873] - Closing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Tue May 28 17:50:18 KST 2019]; parent: Root WebApplicationContext
 ¢º INFO  18:05:40.057 [RMI TCP Connection(7)-127.0.0.1] org.apache.tiles.access.TilesAccess[setContainer:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+â–¶ INFO  16:35:51.422 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  16:35:51.529 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  16:35:51.561 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  16:35:51.832 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  16:35:51.846 [main] org.springframework.beans.factory.support.DefaultListableBeanFactory[registerBeanDefinition:746] - Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/root/root-context.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]]
+â–¶ INFO  16:35:51.849 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@10726a3: startup date [Thu May 30 16:35:51 KST 2019]; root of context hierarchy
+â–¶ INFO  16:35:52.093 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  16:35:52.095 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 16:35:52.137 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a987b8] to prepare test instance [com.bny.test.MySQLTest@1191845]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tilesConfigurer' defined in class path resource [spring/root/root-context.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.apache.tiles.request.ApplicationAccess.register(ApplicationAccess.java:50)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:62)
+	at org.springframework.web.servlet.view.tiles3.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 40 common frames omitted
+â–¶ INFO  16:35:52.147 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  16:35:52.165 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  16:35:52.174 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  16:35:52.219 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  16:35:52.227 [main] org.springframework.beans.factory.support.DefaultListableBeanFactory[registerBeanDefinition:746] - Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/root/root-context.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]]
+â–¶ INFO  16:35:52.227 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@13444fe: startup date [Thu May 30 16:35:52 KST 2019]; root of context hierarchy
+â–¶ INFO  16:35:52.268 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  16:35:52.269 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 16:35:52.274 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a987b8] to prepare test instance [com.bny.test.MySQLTest@11da57d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tilesConfigurer' defined in class path resource [spring/root/root-context.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.apache.tiles.request.ApplicationAccess.register(ApplicationAccess.java:50)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:62)
+	at org.springframework.web.servlet.view.tiles3.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 40 common frames omitted
+â–¶ INFO  16:35:52.279 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  16:35:52.293 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  16:35:52.301 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  16:35:52.342 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  16:35:52.350 [main] org.springframework.beans.factory.support.DefaultListableBeanFactory[registerBeanDefinition:746] - Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/root/root-context.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]]
+â–¶ INFO  16:35:52.350 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@1f8f5ae: startup date [Thu May 30 16:35:52 KST 2019]; root of context hierarchy
+â–¶ INFO  16:35:52.379 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  16:35:52.380 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 16:35:52.384 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a987b8] to prepare test instance [com.bny.test.MySQLTest@1816741]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tilesConfigurer' defined in class path resource [spring/root/root-context.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.apache.tiles.request.ApplicationAccess.register(ApplicationAccess.java:50)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:62)
+	at org.springframework.web.servlet.view.tiles3.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 40 common frames omitted
+¢º INFO  16:36:54.055 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:272] - Root WebApplicationContext: initialization started
+¢º INFO  16:36:54.264 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing Root WebApplicationContext: startup date [Thu May 30 16:36:54 KST 2019]; root of context hierarchy
+¢º INFO  16:36:54.406 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\database-context.xml]
+¢º INFO  16:36:54.520 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\mvc-context.xml]
+¢º INFO  16:36:54.907 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\spring\application\view-context.xml]
+¢º INFO  16:36:55.334 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\common.properties]
+¢º INFO  16:36:55.336 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\jdbc.properties]
+¢º INFO  16:36:56.218 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.joinMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  16:36:56.219 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinMember(org.springframework.web.portlet.ModelAndView) throws java.lang.Exception
+¢º INFO  16:36:56.219 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.loginMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  16:36:56.220 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/logout],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.logoutMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  16:36:56.221 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinView(org.springframework.web.portlet.ModelAndView) throws java.lang.Exception
+¢º INFO  16:36:56.222 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/boardList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.boardList(org.springframework.web.servlet.ModelAndView) throws java.lang.Exception
+¢º INFO  16:36:56.222 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/registBoard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.registBoard(org.springframework.web.servlet.ModelAndView) throws java.lang.Exception
+¢º INFO  16:36:56.222 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/registBoard],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.BoardController.registBoard(javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+¢º INFO  16:36:56.223 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/getBoardList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<com.bny.dto.Board> com.bny.controller.BoardController.getBoardList(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+¢º INFO  16:36:56.223 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/viewBoard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.viewBoard(org.springframework.web.servlet.ModelAndView,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+¢º INFO  16:36:56.223 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/getCommentList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.json.simple.JSONObject com.bny.controller.BoardController.getCommentList(java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+¢º INFO  16:36:56.224 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/addComment],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.json.simple.JSONObject com.bny.controller.BoardController.addComment(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpSession) throws java.lang.Exception
+¢º INFO  16:36:56.224 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.IndexController.TestController(org.springframework.web.servlet.ModelAndView,javax.servlet.http.HttpServletRequest)
+¢º INFO  16:36:56.903 [main] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver[initExceptionHandlerAdviceCache:313] - Detected @ExceptionHandler methods in commonExceptionAdvice
+¢º INFO  16:36:56.988 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+¢º INFO  16:36:56.993 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+¢º INFO  16:36:56.996 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+¢º INFO  16:36:57.000 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#3'
+¢º INFO  16:36:57.004 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/sass/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#4'
+¢º INFO  16:36:57.008 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/publishing/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#5'
+¢º INFO  16:36:57.014 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/vendor/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#6'
+¢º INFO  16:36:57.019 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/lib/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#7'
+¢º INFO  16:36:57.030 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+¢º INFO  16:36:57.116 [main] org.springframework.web.context.ContextLoader[initWebApplicationContext:312] - Root WebApplicationContext: initialization completed in 3053 ms
+¢º INFO  16:36:57.181 [main] org.springframework.web.servlet.DispatcherServlet[initServletBean:461] - FrameworkServlet 'dispatcherServlet': initialization started
+¢º INFO  16:36:57.185 [main] org.springframework.web.context.support.XmlWebApplicationContext[prepareRefresh:513] - Refreshing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Thu May 30 16:36:57 KST 2019]; parent: Root WebApplicationContext
+¢º INFO  16:36:57.188 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from URL [file:/D:/spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32/sts-bundle/pivotal-tc-server/instances/base-instance/wtpwebapps/spring_xml/WEB-INF/classes/spring/root/root-context.xml]
+¢º INFO  16:36:57.207 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\common.properties]
+¢º INFO  16:36:57.207 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32\sts-bundle\pivotal-tc-server\instances\base-instance\wtpwebapps\spring_xml\WEB-INF\classes\config\jdbc.properties]
+¢º INFO  16:36:57.362 [main] org.springframework.web.servlet.view.tiles3.TilesConfigurer[createEvaluator:399] - Found JSP 2.1 ExpressionFactory
+¢º INFO  16:36:57.397 [main] org.apache.tiles.access.TilesAccess[setContainer:93] - Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+¢º INFO  16:36:57.410 [main] org.springframework.web.servlet.DispatcherServlet[initServletBean:480] - FrameworkServlet 'dispatcherServlet': initialization completed in 229 ms
+¢º INFO  16:37:10.200 [RMI TCP Connection(3)-127.0.0.1] org.springframework.web.context.support.XmlWebApplicationContext[doClose:873] - Closing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Thu May 30 16:36:57 KST 2019]; parent: Root WebApplicationContext
+¢º INFO  16:37:10.205 [RMI TCP Connection(3)-127.0.0.1] org.apache.tiles.access.TilesAccess[setContainer:88] - Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+â–¶ INFO  16:43:39.930 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  16:43:40.073 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  16:43:40.095 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  16:43:40.323 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  16:43:40.336 [main] org.springframework.beans.factory.support.DefaultListableBeanFactory[registerBeanDefinition:746] - Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/root/root-context.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]]
+â–¶ INFO  16:43:40.340 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@10726a3: startup date [Thu May 30 16:43:40 KST 2019]; root of context hierarchy
+â–¶ INFO  16:43:40.579 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  16:43:40.581 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 16:43:40.622 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a987b8] to prepare test instance [com.bny.test.MySQLTest@1191845]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tilesConfigurer' defined in class path resource [spring/root/root-context.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.apache.tiles.request.ApplicationAccess.register(ApplicationAccess.java:50)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:62)
+	at org.springframework.web.servlet.view.tiles3.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 40 common frames omitted
+â–¶ INFO  16:43:40.629 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  16:43:40.648 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  16:43:40.657 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  16:43:40.702 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  16:43:40.710 [main] org.springframework.beans.factory.support.DefaultListableBeanFactory[registerBeanDefinition:746] - Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/root/root-context.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]]
+â–¶ INFO  16:43:40.710 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@13444fe: startup date [Thu May 30 16:43:40 KST 2019]; root of context hierarchy
+â–¶ INFO  16:43:40.747 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  16:43:40.747 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 16:43:40.752 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a987b8] to prepare test instance [com.bny.test.MySQLTest@11da57d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tilesConfigurer' defined in class path resource [spring/root/root-context.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.apache.tiles.request.ApplicationAccess.register(ApplicationAccess.java:50)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:62)
+	at org.springframework.web.servlet.view.tiles3.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 40 common frames omitted
+â–¶ INFO  16:43:40.755 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  16:43:40.768 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  16:43:40.776 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  16:43:40.817 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  16:43:40.824 [main] org.springframework.beans.factory.support.DefaultListableBeanFactory[registerBeanDefinition:746] - Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/root/root-context.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]]
+â–¶ INFO  16:43:40.825 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@1f8f5ae: startup date [Thu May 30 16:43:40 KST 2019]; root of context hierarchy
+â–¶ INFO  16:43:40.854 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  16:43:40.854 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 16:43:40.858 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a987b8] to prepare test instance [com.bny.test.MySQLTest@1816741]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tilesConfigurer' defined in class path resource [spring/root/root-context.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.apache.tiles.request.ApplicationAccess.register(ApplicationAccess.java:50)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:62)
+	at org.springframework.web.servlet.view.tiles3.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 40 common frames omitted
+â–¶ INFO  17:35:52.197 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  17:35:52.357 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  17:35:52.381 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  17:35:52.609 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  17:35:52.621 [main] org.springframework.beans.factory.support.DefaultListableBeanFactory[registerBeanDefinition:746] - Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/root/root-context.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]]
+â–¶ INFO  17:35:52.623 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@10726a3: startup date [Thu May 30 17:35:52 KST 2019]; root of context hierarchy
+â–¶ INFO  17:35:52.842 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  17:35:52.844 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 17:35:52.889 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a987b8] to prepare test instance [com.bny.test.MySQLTest@1191845]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tilesConfigurer' defined in class path resource [spring/root/root-context.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.apache.tiles.request.ApplicationAccess.register(ApplicationAccess.java:50)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:62)
+	at org.springframework.web.servlet.view.tiles3.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 40 common frames omitted
+â–¶ INFO  17:35:52.898 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  17:35:52.917 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  17:35:52.926 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  17:35:52.969 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  17:35:52.977 [main] org.springframework.beans.factory.support.DefaultListableBeanFactory[registerBeanDefinition:746] - Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/root/root-context.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]]
+â–¶ INFO  17:35:52.978 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@13444fe: startup date [Thu May 30 17:35:52 KST 2019]; root of context hierarchy
+â–¶ INFO  17:35:53.014 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  17:35:53.015 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 17:35:53.019 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a987b8] to prepare test instance [com.bny.test.MySQLTest@11da57d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tilesConfigurer' defined in class path resource [spring/root/root-context.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.apache.tiles.request.ApplicationAccess.register(ApplicationAccess.java:50)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:62)
+	at org.springframework.web.servlet.view.tiles3.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 40 common frames omitted
+â–¶ INFO  17:35:53.022 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  17:35:53.036 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  17:35:53.043 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  17:35:53.087 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  17:35:53.095 [main] org.springframework.beans.factory.support.DefaultListableBeanFactory[registerBeanDefinition:746] - Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/root/root-context.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]]
+â–¶ INFO  17:35:53.095 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@1f8f5ae: startup date [Thu May 30 17:35:53 KST 2019]; root of context hierarchy
+â–¶ INFO  17:35:53.126 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  17:35:53.126 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ ERROR 17:35:53.130 [main] org.springframework.test.context.TestContextManager[prepareTestInstance:329] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a987b8] to prepare test instance [com.bny.test.MySQLTest@1816741]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tilesConfigurer' defined in class path resource [spring/root/root-context.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.apache.tiles.request.ApplicationAccess.register(ApplicationAccess.java:50)
+	at org.apache.tiles.startup.AbstractTilesInitializer.initialize(AbstractTilesInitializer.java:62)
+	at org.springframework.web.servlet.view.tiles3.TilesConfigurer.afterPropertiesSet(TilesConfigurer.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 40 common frames omitted
+â–¶ INFO  17:36:55.480 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  17:36:55.564 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  17:36:55.583 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  17:36:55.739 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  17:36:55.752 [main] org.springframework.beans.factory.support.DefaultListableBeanFactory[registerBeanDefinition:746] - Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/root/root-context.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]]
+â–¶ INFO  17:36:55.756 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@10726a3: startup date [Thu May 30 17:36:55 KST 2019]; root of context hierarchy
+â–¶ INFO  17:36:55.990 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  17:36:55.991 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ INFO  17:36:56.538 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinView(org.springframework.web.portlet.ModelAndView) throws java.lang.Exception
+â–¶ INFO  17:36:56.539 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinMember(org.springframework.web.portlet.ModelAndView) throws java.lang.Exception
+â–¶ INFO  17:36:56.539 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.joinMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+â–¶ INFO  17:36:56.539 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.loginMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+â–¶ INFO  17:36:56.540 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/logout],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.logoutMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+â–¶ INFO  17:36:56.541 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/boardList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.boardList(org.springframework.web.servlet.ModelAndView) throws java.lang.Exception
+â–¶ INFO  17:36:56.541 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/registBoard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.registBoard(org.springframework.web.servlet.ModelAndView) throws java.lang.Exception
+â–¶ INFO  17:36:56.541 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/registBoard],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.BoardController.registBoard(javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+â–¶ INFO  17:36:56.542 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/getBoardList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<com.bny.dto.Board> com.bny.controller.BoardController.getBoardList(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+â–¶ INFO  17:36:56.542 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/viewBoard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.viewBoard(org.springframework.web.servlet.ModelAndView,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+â–¶ INFO  17:36:56.543 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/getCommentList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.json.simple.JSONObject com.bny.controller.BoardController.getCommentList(java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+â–¶ INFO  17:36:56.543 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/addComment],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.json.simple.JSONObject com.bny.controller.BoardController.addComment(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpSession) throws java.lang.Exception
+â–¶ INFO  17:36:56.544 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.IndexController.TestController(org.springframework.web.servlet.ModelAndView,javax.servlet.http.HttpServletRequest)
+â–¶ INFO  17:36:56.967 [main] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver[initExceptionHandlerAdviceCache:313] - Detected @ExceptionHandler methods in commonExceptionAdvice
+â–¶ INFO  17:36:57.014 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+â–¶ INFO  17:36:57.017 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+â–¶ INFO  17:36:57.020 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+â–¶ INFO  17:36:57.023 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#3'
+â–¶ INFO  17:36:57.027 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/sass/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#4'
+â–¶ INFO  17:36:57.031 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/publishing/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#5'
+â–¶ INFO  17:36:57.036 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/vendor/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#6'
+â–¶ INFO  17:36:57.042 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/lib/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#7'
+â–¶ INFO  17:36:57.050 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+â–¶ INFO  17:36:57.374 [Thread-0] org.springframework.context.support.GenericApplicationContext[doClose:873] - Closing org.springframework.context.support.GenericApplicationContext@10726a3: startup date [Thu May 30 17:36:55 KST 2019]; root of context hierarchy
+â–¶ INFO  17:37:37.679 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from class path resource [spring/root/root-context.xml]
+â–¶ INFO  17:37:37.762 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\database-context.xml]
+â–¶ INFO  17:37:37.780 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\mvc-context.xml]
+â–¶ INFO  17:37:37.930 [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader[loadBeanDefinitions:316] - Loading XML bean definitions from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]
+â–¶ INFO  17:37:37.941 [main] org.springframework.beans.factory.support.DefaultListableBeanFactory[registerBeanDefinition:746] - Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/root/root-context.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\spring\application\view-context.xml]]
+â–¶ INFO  17:37:37.944 [main] org.springframework.context.support.GenericApplicationContext[prepareRefresh:513] - Refreshing org.springframework.context.support.GenericApplicationContext@10726a3: startup date [Thu May 30 17:37:37 KST 2019]; root of context hierarchy
+â–¶ INFO  17:37:38.158 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\common.properties]
+â–¶ INFO  17:37:38.159 [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer[loadProperties:172] - Loading properties file from file [D:\vsworkspace\nams\learningSpring\learningSpring\spring_xml\build\classes\config\jdbc.properties]
+â–¶ INFO  17:37:38.621 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.joinMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+â–¶ INFO  17:37:38.621 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinMember(org.springframework.web.portlet.ModelAndView) throws java.lang.Exception
+â–¶ INFO  17:37:38.622 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.loginMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+â–¶ INFO  17:37:38.622 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/logout],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.AuthController.logoutMember(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+â–¶ INFO  17:37:38.622 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/auth/join],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.portlet.ModelAndView com.bny.controller.AuthController.joinView(org.springframework.web.portlet.ModelAndView) throws java.lang.Exception
+â–¶ INFO  17:37:38.624 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/boardList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.boardList(org.springframework.web.servlet.ModelAndView) throws java.lang.Exception
+â–¶ INFO  17:37:38.624 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/registBoard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.registBoard(org.springframework.web.servlet.ModelAndView) throws java.lang.Exception
+â–¶ INFO  17:37:38.624 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/registBoard],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.bny.controller.BoardController.registBoard(javax.servlet.http.HttpServletRequest,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.lang.Exception
+â–¶ INFO  17:37:38.625 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/getBoardList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<com.bny.dto.Board> com.bny.controller.BoardController.getBoardList(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+â–¶ INFO  17:37:38.625 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/viewBoard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.BoardController.viewBoard(org.springframework.web.servlet.ModelAndView,java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+â–¶ INFO  17:37:38.625 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/getCommentList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.json.simple.JSONObject com.bny.controller.BoardController.getCommentList(java.util.Map<java.lang.String, java.lang.String>) throws java.lang.Exception
+â–¶ INFO  17:37:38.626 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/board/addComment],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.json.simple.JSONObject com.bny.controller.BoardController.addComment(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpSession) throws java.lang.Exception
+â–¶ INFO  17:37:38.626 [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping[registerHandlerMethod:181] - Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.bny.controller.IndexController.TestController(org.springframework.web.servlet.ModelAndView,javax.servlet.http.HttpServletRequest)
+â–¶ INFO  17:37:38.996 [main] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver[initExceptionHandlerAdviceCache:313] - Detected @ExceptionHandler methods in commonExceptionAdvice
+â–¶ INFO  17:37:39.045 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+â–¶ INFO  17:37:39.047 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+â–¶ INFO  17:37:39.050 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+â–¶ INFO  17:37:39.053 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#3'
+â–¶ INFO  17:37:39.057 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/sass/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#4'
+â–¶ INFO  17:37:39.061 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/publishing/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#5'
+â–¶ INFO  17:37:39.067 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/vendor/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#6'
+â–¶ INFO  17:37:39.073 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/lib/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#7'
+â–¶ INFO  17:37:39.082 [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping[registerHandler:315] - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+â–¶ DEBUG 17:37:39.436 [main] com.bny.dao.UserDao.selectUserById[debug:143] - ==>  Preparing: SELECT COUNT(id) FROM users WHERE `id`=? 
+â–¶ DEBUG 17:37:39.459 [main] com.bny.dao.UserDao.selectUserById[debug:143] - ==> Parameters: bny64(String)
+â–¶ DEBUG 17:37:39.478 [main] com.bny.dao.UserDao.selectUserById[debug:143] - <==      Total: 1
+â–¶ DEBUG 17:37:39.481 [main] com.bny.test.MySQLTest[testQuery:54] - ### 0
+â–¶ DEBUG 17:37:39.486 [main] com.bny.dao.UserDao.selectUserById[debug:143] - ==>  Preparing: SELECT COUNT(id) FROM users WHERE `id`=? 
+â–¶ DEBUG 17:37:39.486 [main] com.bny.dao.UserDao.selectUserById[debug:143] - ==> Parameters: qoskaduf(String)
+â–¶ DEBUG 17:37:39.490 [main] com.bny.dao.UserDao.selectUserById[debug:143] - <==      Total: 1
+â–¶ DEBUG 17:37:39.491 [main] com.bny.test.MySQLTest[testQuery:56] - ### 0
+â–¶ INFO  17:37:39.493 [Thread-0] org.springframework.context.support.GenericApplicationContext[doClose:873] - Closing org.springframework.context.support.GenericApplicationContext@10726a3: startup date [Thu May 30 17:37:37 KST 2019]; root of context hierarchy
