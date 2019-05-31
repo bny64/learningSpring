@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
+	<!-- BasicDataSource를 사용하기 위한 라이브러리 : dbcp2, pool2 (자바 버전 7 이상)
+	dbcp2 -> connection pool 라이브러리 : 관리
+	-->
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName"><value>${db.driver}</value></property>
+		<property name="url"><value>${db.url}</value></property>
+		<property name="username"><value>${db.username}</value></property>
+		<property name="password"><value>${db.password}</value></property>		
+	</bean>
+	
+	<!-- mybatis 스프링 연동 모듈 : dataSource를 필요로 한다. -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:mybatis/config/mysql-config.xml"/>                
+        <!-- <property name="mapperLocations" value="classpath:mybatis/mapper/*_mapper.xml"/> -->
+        <property name="dataSource" ref="dataSource"/>        
+        <!-- ref는 dataSource라는 id 혹은 이름을 가진 bean을 생성자의 인자로 넘겨주겠다는 뜻. -->
+    </bean>
+    <!-- dataSource는 mysql에서 사용할 connection에 대한 정보 -->
+    <!-- sqlSessionFactory는 query를 날릴 때 사용할 세션에 대한 정보 -->
+    
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+	 	<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!-- <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.bny.dao"/>
+	</bean> -->
+</beans>
