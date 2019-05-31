@@ -4,7 +4,7 @@
   "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
   
   <tiles-definitions>
-  	<definition name="layout" template="/WEB-INF/views/layout/layout1.jsp">
+  	<definition name="layout1" template="/WEB-INF/views/layout/layout1.jsp">
   		<put-attribute name="headerInclude" value="/WEB-INF/views/layout/headerInclude.jsp"/>
   		<put-attribute name="header_top" value="/WEB-INF/views/layout/header_top.jsp"/>
   		<put-attribute name="header_mid" value="/WEB-INF/views/layout/header_mid.jsp"/>
@@ -17,8 +17,23 @@
   		<put-attribute name="footer_bot" value="/WEB-INF/views/layout/footer_bot.jsp"/>
   	</definition>
   	
-  	<definition name="index" extends="layout">
+  	<definition name="layout2" template="/WEB-INF/views/layout/layout2.jsp">
+  		<put-attribute name="headerInclude" value="/WEB-INF/views/layout/headerInclude.jsp"/>
+  		<put-attribute name="header_top" value="/WEB-INF/views/layout/header_top.jsp"/>
+  		<put-attribute name="header_mid" value="/WEB-INF/views/layout/header_mid.jsp"/>
+  		<put-attribute name="header_bot" value="/WEB-INF/views/layout/header_bot.jsp"/>  		  		
+  		<put-attribute name="body" value=""/>
+  		<put-attribute name="footer_top" value="/WEB-INF/views/layout/footer_top.jsp"/>
+  		<put-attribute name="footer_wid" value="/WEB-INF/views/layout/footer_wid.jsp"/>
+  		<put-attribute name="footer_bot" value="/WEB-INF/views/layout/footer_bot.jsp"/>
+  	</definition>
+  	
+  	<definition name="index" extends="layout1">
   		<put-attribute name="body" value="/WEB-INF/views/main/index.jsp"/>
+  	</definition>
+  	
+  	<definition name="auth/*" extends="layout2">
+  		<put-attribute name="body" value="/WEB-INF/views/auth/{1}.jsp"/>
   	</definition>
   	<!-- 
   		tiles 설정시에 
