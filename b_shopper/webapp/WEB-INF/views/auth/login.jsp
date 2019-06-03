@@ -24,15 +24,16 @@
 				<div class="signup-form"><!--sign up form-->
 					<h2>회원 가입</h2>
 					<form action="#">
-						<input type="text" placeholder="ID"/>
-						<input type="text" placeholder="Name"/>
-						<input type="email" placeholder="Email Address"/>
-						<input type="password" placeholder="Password"/>
-						<input type="text" placeholder="address">						 
-						<button type="submit" class="btn btn-default">Signup</button>
+						<input type="text" placeholder="ID" id="id"/>
+						<input type="text" placeholder="Name" id="name"/>
+						<input type="email" placeholder="Email Address" id="email"/>
+						<input type="password" placeholder="Password" id="password"/>
+						<input type="text" placeholder="address" id="address">						 
+						<button type="submit" class="btn btn-default" id="signupBtn">Signup</button>
 					</form>
 				</div><!--/sign up form-->
 			</div>
 		</div>
 	</div>
 </section><!--/form-->
+<script src="/js/auth/login.js"></script>
