@@ -12,10 +12,8 @@ public class IndexController {
 	
 	@RequestMapping(value="/index", method=RequestMethod.GET)
 	public ModelAndView TestController(ModelAndView mnv, HttpServletRequest req){
+			
 		
-		System.out.println("hello");
-		
-		//System.out.println(req.getSession().getAttribute("userInfo"));
 		mnv.setViewName("index");
 		return mnv;
 	}

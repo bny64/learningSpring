@@ -5,8 +5,6 @@ import java.security.MessageDigest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.bny.controller.AuthController;
-
 public class Security {
 	
 	private static Logger logger = LoggerFactory.getLogger(Security.class);
@@ -28,6 +26,7 @@ public class Security {
 	
 	public String saltSHA1 (String userKey) throws Exception{
 		
+		logger.debug(userKey);
 		MessageDigest md = MessageDigest.getInstance("SHA1");
 		md.update(new byte[12]);
 		byte[] bytes = md.digest(userKey.getBytes());
@@ -37,6 +36,7 @@ public class Security {
 		}
 		
 		userKey = sb.toString();
+		logger.debug(userKey);
 		return userKey;
 	}
 	

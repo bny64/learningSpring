@@ -2,6 +2,7 @@ package com.bny.dto;
 
 public class User {
 	
+	private String userKey;
 	private String id;
 	private String password;
 	private String name;
@@ -11,6 +12,13 @@ public class User {
 	private char userClass;
 	private String joinType;
 	private String regDate;
+		
+	public String getUserKey() {
+		return userKey;
+	}
+	public void setUserKey(String userKey) {
+		this.userKey = userKey;
+	}
 	public String getId() {
 		return id;
 	}

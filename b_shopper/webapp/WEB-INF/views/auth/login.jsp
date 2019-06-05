@@ -7,13 +7,13 @@
 				<div class="login-form"><!--login form-->
 					<h2>로그인</h2>
 					<form action="#">
-						<input type="email" placeholder="Email" />
-						<input type="password" placeholder="Password" />
+						<input type="text" placeholder="ID" id="loginId"/>
+						<input type="password" placeholder="Password" id="loginPass"/>
 						<!-- <span>
 							<input type="checkbox" class="checkbox"> 
 							Keep me signed in
 						</span> -->
-						<button type="submit" class="btn btn-default">Login</button>
+						<button type="submit" class="btn btn-default" id="loginBtn">Login</button>
 					</form>
 				</div><!--/login form-->
 			</div>

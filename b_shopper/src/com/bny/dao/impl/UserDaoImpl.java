@@ -1,5 +1,7 @@
 package com.bny.dao.impl;
 
+import java.util.Map;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -17,7 +19,23 @@ public class UserDaoImpl extends CommonDaoImpl implements UserDao{
 	
 	@Override
 	public int insertUser(User user) throws Exception {
-		return sqlSessionTemplate.insert(getNameSpace(), user);		
+		return sqlSessionTemplate.insert(getNameSpace()+".insertUser", user);		
 	}
+
+	@Override
+	public int selectUserById(String id) throws Exception {
+		return sqlSessionTemplate.selectOne(getNameSpace()+".selectUserById", id);
+	}
+
+	@Override
+	public int selectUserByEmail(String email) throws Exception {
+		return sqlSessionTemplate.selectOne(getNameSpace()+".selectUserByEmail", email);
+	}
+
+	@Override
+	public Map<String, String> selectUserByIdPass(Map<String, String> userInfo) throws Exception {
+		return sqlSessionTemplate.selectOne(getNameSpace()+".selectUserByIdPass", userInfo);
+	}
+	
 	
 }
