@@ -52,7 +52,7 @@ public class MainForAssembler {
 		req.setConfirmPassword(arg[4]);
 		
 		if(!req.isPasswordEqualToConfirmPassword()) {
-			System.out.println("암호와 확인이 일치하지 않습니다\n");
+			System.out.println("암호와 확인이 일치하지 않습니다\n"); 
 			return;
 		}
 		
