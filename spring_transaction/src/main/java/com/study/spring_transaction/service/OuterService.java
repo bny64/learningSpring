@@ -11,21 +11,23 @@ import java.util.Map;
 @Transactional
 public class OuterService {
 
-    private ProductService productService;
+    private final ProductService productService;
 
     @Autowired
     public OuterService(ProductService productService) {
         this.productService = productService;
     }
 
+    //클래스 레벨의 트랜잭션
     public int addProductFromOuter(List<Map<String, String>> list) {
         int success = 0;
         int fail = 0;
 
         for (int i = 0; i < list.size(); i++) {
+
             try {
                 Map<String, String> element = list.get(i);
-                productService.addProduct(element);
+                int result = productService.addProductCatchUpperMethod(element);
                 System.out.println(" i :" + i);
                 success += 1;
             } catch (Exception e) {

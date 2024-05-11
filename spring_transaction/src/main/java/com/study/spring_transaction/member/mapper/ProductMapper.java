@@ -7,6 +7,7 @@ import java.util.Map;
 
 @Mapper
 public interface ProductMapper {
-    List<Map> findProductAllList();
-    int addProduct(Map map);
+    List<Map<String, String>> findProductAllList();
+
+    int addProduct(Map<String, String> map);
 }

@@ -40,7 +40,7 @@ public class H2Runner implements ApplicationRunner {
             int result2 = outerService.addProductFromOuter(list);
             System.out.println("result2 : " + result2);
 
-            List<Map> result = productService.findProductAllList();
+            List<Map<String, String>> result = productService.findProductAllList();
             result.stream().forEach(System.out::println);
         } catch (Exception e) {
             e.printStackTrace();

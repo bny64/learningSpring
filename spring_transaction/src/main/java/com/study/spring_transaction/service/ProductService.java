@@ -13,27 +13,57 @@ import java.util.Map;
 @Transactional
 public class ProductService {
 
-    ProductMapper productMapper;
+    private final ProductMapper productMapper;
 
     @Autowired
     public ProductService(ProductMapper productMapper) {
         this.productMapper = productMapper;
     }
 
-    public List<Map> findProductAllList() {
+    public List<Map<String, String>> findProductAllList() {
         return productMapper.findProductAllList();
     }
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
-    public int addProduct(Map<String, String> map) {
+    /**
+     * 해당 메서드는 현재 메서드에서 예외를 잡기 때문에 for loop를 도는 동안 모두 정상적으로 커밋된다.
+     *
+     * @param map
+     * @return
+     */
+    public int addProductCatchCurrentMethod(Map<String, String> map) {
 
         String prodName = map.get("prodName");
         int result = 0;
 
-        if ("노트북".equalsIgnoreCase(prodName)) {
-            throw new RuntimeException("Runtime");
+        try {
+            result = productMapper.addProduct(map);
+
+            if ("휴대폰".equalsIgnoreCase(prodName)) {
+                throw new RuntimeException("휴대폰 Error");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
+        return result;
+    }
+
+    /**
+     * 해당 메서드는 상위 메서드에서 예외를 잡기 때문에 for loop를 돈 후 예외가 발생해서 모두 롤백된다.
+     * @param map
+     * @return
+     */
+    public int addProductCatchUpperMethod(Map<String, String> map) {
+
+        String prodName = map.get("prodName");
+        int result = 0;
+
         result = productMapper.addProduct(map);
+
+        if ("휴대폰".equalsIgnoreCase(prodName)) {
+            throw new RuntimeException("휴대폰 Error");
+        }
 
         return result;
     }
