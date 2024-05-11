@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.study.spring_transaction.member.mapper.ProductMapper">
+    <select id="findProductAllList" resultType="map">
+        SELECT * FROM Products
+    </select>
+
+    <insert id="addProduct" parameterType="map">
+        INSERT INTO Products(prod_name, prod_price) VALUES(#{prodName}, #{prodPrice})
+    </insert>
+</mapper>
